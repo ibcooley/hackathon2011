@@ -1,0 +1,94 @@
+
+/*
+    RazzleTrip
+
+    Josh Skidmore <josh.skidmore@sparcedge.com>
+    Bryan Gilbert <bryan.gilbert@sparcedge.com>
+    Taylor Brockman <taylor.brockman@gmail.com>
+*/
+
+
+.sev1 {
+    background: #577ccf !important; /* blue  */
+}
+
+.sev2 {
+    background: #77ee8a !important; /* green */
+}
+
+.sev3 {
+    background: #e7f6aa !important; /* yellow */
+    color: #333 !important;
+}
+
+.sev4 {
+    background: #e2c473 !important; /* orange */
+    color: #333 !important;
+}
+
+.sev5 {
+    background: #f8b49f !important; /* red */
+}
+.dash-content {
+    margin: 0;
+    padding: 0;
+}
+
+#razzletrip-intro {
+    padding: 5px 0 15px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#razzletrip-intro p {
+    margin: 0;
+    padding: 0;
+}
+
+#map-canvas {
+    height: 274px;
+    width: 100%;
+    /*overflow: hidden;*/
+}
+
+.details-wrapper ul li p {
+    padding: 5px 10px; 
+    margin: 0;
+}
+
+#time-slider-wrapper {
+    padding-bottom: 10px;
+}
+#time-slider-wrapper .ui-slider {
+    width: 100%;
+}
+
+#time-slider {
+    overflow: hidden;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
+
+#time-slider-input {
+    display: none;
+}
+
+.details-wrapper {
+    padding: 10px 0 10px 0 ;
+    
+}
+
+    .details-wrapper ul li {
+        font-size: 16px;
+        padding: 10px 15px 15px 15px;
+        color: #fff;
+        background: #333;
+        text-shadow: none;
+    }
+
+#details-wrapper p {
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+}

@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AA61AEA1409566E00F9EB1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA61AE91409566E00F9EB1E /* UIKit.framework */; };
+		8AA61AEC1409566E00F9EB1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA61AEB1409566E00F9EB1E /* Foundation.framework */; };
+		8AA61AEE1409566E00F9EB1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA61AED1409566E00F9EB1E /* CoreGraphics.framework */; };
+		8AA61AF41409566E00F9EB1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AA61AF21409566E00F9EB1E /* InfoPlist.strings */; };
+		8AA61AF61409566E00F9EB1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA61AF51409566E00F9EB1E /* main.m */; };
+		8AA61AFA1409566E00F9EB1E /* BikeShareProAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA61AF91409566E00F9EB1E /* BikeShareProAppDelegate.m */; };
+		8AA61AFD1409566E00F9EB1E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA61AFB1409566E00F9EB1E /* MainWindow.xib */; };
+		8AA61B001409566E00F9EB1E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA61AFF1409566E00F9EB1E /* RootViewController.m */; };
+		8AA61B031409566E00F9EB1E /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA61B011409566E00F9EB1E /* RootViewController.xib */; };
+		8AA61B11140959AC00F9EB1E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA61B0F140959AC00F9EB1E /* SettingsViewController.m */; };
+		8AA61B12140959AC00F9EB1E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA61B10140959AC00F9EB1E /* SettingsViewController.xib */; };
+		8AA61B1814095CCA00F9EB1E /* bike.html in Resources */ = {isa = PBXBuildFile; fileRef = 8AA61B1714095CCA00F9EB1E /* bike.html */; };
+		8AA61B1B14095D4200F9EB1E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA61B1A14095D4200F9EB1E /* WebViewController.m */; };
+		8AF7553F1409611500A0E9B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF7553E1409611500A0E9B0 /* Default.png */; };
+		8AF755421409665700A0E9B0 /* bikes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AF755411409665700A0E9B0 /* bikes.plist */; };
+		8AF7554614096B5700A0E9B0 /* CheckOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7554414096B5700A0E9B0 /* CheckOutViewController.m */; };
+		8AF7554714096B5700A0E9B0 /* CheckOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF7554514096B5700A0E9B0 /* CheckOutViewController.xib */; };
+		8AF7554A14096FAE00A0E9B0 /* CheckOutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7554914096FAE00A0E9B0 /* CheckOutTableViewCell.m */; };
+		8AF75556140974A200A0E9B0 /* 2012Cobia.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF7554C140974A200A0E9B0 /* 2012Cobia.png */; };
+		8AF75557140974A200A0E9B0 /* 7200.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF7554D140974A200A0E9B0 /* 7200.png */; };
+		8AF75558140974A200A0E9B0 /* 7300WSD.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF7554E140974A200A0E9B0 /* 7300WSD.png */; };
+		8AF75559140974A200A0E9B0 /* BGRoulux1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AF7554F140974A200A0E9B0 /* BGRoulux1.jpg */; };
+		8AF7555A140974A200A0E9B0 /* Hotrock20StreetBoys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AF75550140974A200A0E9B0 /* Hotrock20StreetBoys.jpg */; };
+		8AF7555B140974A200A0E9B0 /* Hotrock247-SpeedGirls.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AF75551140974A200A0E9B0 /* Hotrock247-SpeedGirls.jpg */; };
+		8AF7555C140974A200A0E9B0 /* PureDeluxeTrike.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF75552140974A200A0E9B0 /* PureDeluxeTrike.png */; };
+		8AF7555D140974A200A0E9B0 /* RockhopperLTD29er.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AF75553140974A200A0E9B0 /* RockhopperLTD29er.jpg */; };
+		8AF7555E140974A200A0E9B0 /* StumpjumperExpert29er.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AF75554140974A200A0E9B0 /* StumpjumperExpert29er.jpg */; };
+		8AF7555F140974A200A0E9B0 /* TopFuel97.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF75555140974A200A0E9B0 /* TopFuel97.png */; };
+		8AF7556314097ABF00A0E9B0 /* BikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7556114097ABF00A0E9B0 /* BikeViewController.m */; };
+		8AF7556414097ABF00A0E9B0 /* BikeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF7556214097ABF00A0E9B0 /* BikeViewController.xib */; };
+		8AF75568140980D700A0E9B0 /* SerialNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF75566140980D600A0E9B0 /* SerialNumberViewController.m */; };
+		8AF75569140980D700A0E9B0 /* SerialNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF75567140980D700A0E9B0 /* SerialNumberView.xib */; };
+		8AF7556B1409880A00A0E9B0 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF7556A1409880A00A0E9B0 /* barcode.png */; };
+		8AF7556F14098E3A00A0E9B0 /* ReturnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7556D14098E3900A0E9B0 /* ReturnViewController.m */; };
+		8AF7557014098E3A00A0E9B0 /* ReturnViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF7556E14098E3900A0E9B0 /* ReturnViewController.xib */; };
+		8AF75576140995F900A0E9B0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF75575140995F900A0E9B0 /* CoreLocation.framework */; };
+		8AF755781409A67D00A0E9B0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF755771409A67C00A0E9B0 /* Icon.png */; };
+		8AF7557B1409AA0E00A0E9B0 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7557A1409AA0D00A0E9B0 /* ReportViewController.m */; };
+		8AF7557E1409AA4A00A0E9B0 /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7557D1409AA4900A0E9B0 /* CellTextView.m */; };
+		8AF755811409ACCA00A0E9B0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF755801409ACCA00A0E9B0 /* MessageUI.framework */; };
+		8AF755831409AF3B00A0E9B0 /* ReportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF755821409AF3B00A0E9B0 /* ReportView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8AA61AE51409566E00F9EB1E /* BikeSharePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeSharePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AA61AE91409566E00F9EB1E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8AA61AEB1409566E00F9EB1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8AA61AED1409566E00F9EB1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8AA61AF11409566E00F9EB1E /* BikeSharePro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BikeSharePro-Info.plist"; sourceTree = "<group>"; };
+		8AA61AF31409566E00F9EB1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8AA61AF51409566E00F9EB1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8AA61AF71409566E00F9EB1E /* BikeSharePro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BikeSharePro-Prefix.pch"; sourceTree = "<group>"; };
+		8AA61AF81409566E00F9EB1E /* BikeShareProAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BikeShareProAppDelegate.h; sourceTree = "<group>"; };
+		8AA61AF91409566E00F9EB1E /* BikeShareProAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BikeShareProAppDelegate.m; sourceTree = "<group>"; };
+		8AA61AFC1409566E00F9EB1E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		8AA61AFE1409566E00F9EB1E /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		8AA61AFF1409566E00F9EB1E /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		8AA61B021409566E00F9EB1E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		8AA61B0E140959AC00F9EB1E /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		8AA61B0F140959AC00F9EB1E /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		8AA61B10140959AC00F9EB1E /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		8AA61B1714095CCA00F9EB1E /* bike.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = bike.html; sourceTree = "<group>"; };
+		8AA61B1914095D4200F9EB1E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		8AA61B1A14095D4200F9EB1E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		8AF7553E1409611500A0E9B0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8AF755411409665700A0E9B0 /* bikes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bikes.plist; sourceTree = "<group>"; };
+		8AF7554314096B5700A0E9B0 /* CheckOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckOutViewController.h; sourceTree = "<group>"; };
+		8AF7554414096B5700A0E9B0 /* CheckOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckOutViewController.m; sourceTree = "<group>"; };
+		8AF7554514096B5700A0E9B0 /* CheckOutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckOutViewController.xib; sourceTree = "<group>"; };
+		8AF7554814096FAE00A0E9B0 /* CheckOutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckOutTableViewCell.h; sourceTree = "<group>"; };
+		8AF7554914096FAE00A0E9B0 /* CheckOutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckOutTableViewCell.m; sourceTree = "<group>"; };
+		8AF7554C140974A200A0E9B0 /* 2012Cobia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2012Cobia.png; sourceTree = "<group>"; };
+		8AF7554D140974A200A0E9B0 /* 7200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7200.png; sourceTree = "<group>"; };
+		8AF7554E140974A200A0E9B0 /* 7300WSD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7300WSD.png; sourceTree = "<group>"; };
+		8AF7554F140974A200A0E9B0 /* BGRoulux1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BGRoulux1.jpg; sourceTree = "<group>"; };
+		8AF75550140974A200A0E9B0 /* Hotrock20StreetBoys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hotrock20StreetBoys.jpg; sourceTree = "<group>"; };
+		8AF75551140974A200A0E9B0 /* Hotrock247-SpeedGirls.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Hotrock247-SpeedGirls.jpg"; sourceTree = "<group>"; };
+		8AF75552140974A200A0E9B0 /* PureDeluxeTrike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PureDeluxeTrike.png; sourceTree = "<group>"; };
+		8AF75553140974A200A0E9B0 /* RockhopperLTD29er.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RockhopperLTD29er.jpg; sourceTree = "<group>"; };
+		8AF75554140974A200A0E9B0 /* StumpjumperExpert29er.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StumpjumperExpert29er.jpg; sourceTree = "<group>"; };
+		8AF75555140974A200A0E9B0 /* TopFuel97.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopFuel97.png; sourceTree = "<group>"; };
+		8AF7556014097ABE00A0E9B0 /* BikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeViewController.h; sourceTree = "<group>"; };
+		8AF7556114097ABF00A0E9B0 /* BikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeViewController.m; sourceTree = "<group>"; };
+		8AF7556214097ABF00A0E9B0 /* BikeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BikeViewController.xib; sourceTree = "<group>"; };
+		8AF75565140980D500A0E9B0 /* SerialNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialNumberViewController.h; sourceTree = "<group>"; };
+		8AF75566140980D600A0E9B0 /* SerialNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialNumberViewController.m; sourceTree = "<group>"; };
+		8AF75567140980D700A0E9B0 /* SerialNumberView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SerialNumberView.xib; sourceTree = "<group>"; };
+		8AF7556A1409880A00A0E9B0 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
+		8AF7556C14098E3800A0E9B0 /* ReturnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReturnViewController.h; sourceTree = "<group>"; };
+		8AF7556D14098E3900A0E9B0 /* ReturnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReturnViewController.m; sourceTree = "<group>"; };
+		8AF7556E14098E3900A0E9B0 /* ReturnViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReturnViewController.xib; sourceTree = "<group>"; };
+		8AF75575140995F900A0E9B0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8AF755771409A67C00A0E9B0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8AF755791409AA0D00A0E9B0 /* ReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportViewController.h; sourceTree = "<group>"; };
+		8AF7557A1409AA0D00A0E9B0 /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
+		8AF7557C1409AA4800A0E9B0 /* CellTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTextView.h; sourceTree = "<group>"; };
+		8AF7557D1409AA4900A0E9B0 /* CellTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTextView.m; sourceTree = "<group>"; };
+		8AF7557F1409AC1F00A0E9B0 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8AF755801409ACCA00A0E9B0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8AF755821409AF3B00A0E9B0 /* ReportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AA61AE21409566E00F9EB1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA61AEA1409566E00F9EB1E /* UIKit.framework in Frameworks */,
+				8AA61AEC1409566E00F9EB1E /* Foundation.framework in Frameworks */,
+				8AA61AEE1409566E00F9EB1E /* CoreGraphics.framework in Frameworks */,
+				8AF75576140995F900A0E9B0 /* CoreLocation.framework in Frameworks */,
+				8AF755811409ACCA00A0E9B0 /* MessageUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AA61ADA1409566E00F9EB1E = {
+			isa = PBXGroup;
+			children = (
+				8AA61AEF1409566E00F9EB1E /* BikeSharePro */,
+				8AA61AE81409566E00F9EB1E /* Frameworks */,
+				8AA61AE61409566E00F9EB1E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AA61AE61409566E00F9EB1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AA61AE51409566E00F9EB1E /* BikeSharePro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AA61AE81409566E00F9EB1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AF755801409ACCA00A0E9B0 /* MessageUI.framework */,
+				8AF75575140995F900A0E9B0 /* CoreLocation.framework */,
+				8AA61AE91409566E00F9EB1E /* UIKit.framework */,
+				8AA61AEB1409566E00F9EB1E /* Foundation.framework */,
+				8AA61AED1409566E00F9EB1E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AA61AEF1409566E00F9EB1E /* BikeSharePro */ = {
+			isa = PBXGroup;
+			children = (
+				8AA61AF81409566E00F9EB1E /* BikeShareProAppDelegate.h */,
+				8AA61AF91409566E00F9EB1E /* BikeShareProAppDelegate.m */,
+				8AA61AFB1409566E00F9EB1E /* MainWindow.xib */,
+				8AA61AFE1409566E00F9EB1E /* RootViewController.h */,
+				8AA61AFF1409566E00F9EB1E /* RootViewController.m */,
+				8AA61B011409566E00F9EB1E /* RootViewController.xib */,
+				8AF7554314096B5700A0E9B0 /* CheckOutViewController.h */,
+				8AF7554414096B5700A0E9B0 /* CheckOutViewController.m */,
+				8AF7554514096B5700A0E9B0 /* CheckOutViewController.xib */,
+				8AF7556C14098E3800A0E9B0 /* ReturnViewController.h */,
+				8AF7556D14098E3900A0E9B0 /* ReturnViewController.m */,
+				8AF7556E14098E3900A0E9B0 /* ReturnViewController.xib */,
+				8AF7556014097ABE00A0E9B0 /* BikeViewController.h */,
+				8AF7556114097ABF00A0E9B0 /* BikeViewController.m */,
+				8AF7556214097ABF00A0E9B0 /* BikeViewController.xib */,
+				8AF75565140980D500A0E9B0 /* SerialNumberViewController.h */,
+				8AF75566140980D600A0E9B0 /* SerialNumberViewController.m */,
+				8AF75567140980D700A0E9B0 /* SerialNumberView.xib */,
+				8AA61B0E140959AC00F9EB1E /* SettingsViewController.h */,
+				8AA61B0F140959AC00F9EB1E /* SettingsViewController.m */,
+				8AA61B10140959AC00F9EB1E /* SettingsViewController.xib */,
+				8AA61B1914095D4200F9EB1E /* WebViewController.h */,
+				8AA61B1A14095D4200F9EB1E /* WebViewController.m */,
+				8AF7554814096FAE00A0E9B0 /* CheckOutTableViewCell.h */,
+				8AF7554914096FAE00A0E9B0 /* CheckOutTableViewCell.m */,
+				8AF755791409AA0D00A0E9B0 /* ReportViewController.h */,
+				8AF7557A1409AA0D00A0E9B0 /* ReportViewController.m */,
+				8AF755821409AF3B00A0E9B0 /* ReportView.xib */,
+				8AF7557C1409AA4800A0E9B0 /* CellTextView.h */,
+				8AF7557D1409AA4900A0E9B0 /* CellTextView.m */,
+				8AF7557F1409AC1F00A0E9B0 /* Constants.h */,
+				8AA61AF01409566E00F9EB1E /* Supporting Files */,
+			);
+			path = BikeSharePro;
+			sourceTree = "<group>";
+		};
+		8AA61AF01409566E00F9EB1E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AF755771409A67C00A0E9B0 /* Icon.png */,
+				8AF7556A1409880A00A0E9B0 /* barcode.png */,
+				8AF7554B140974A200A0E9B0 /* bikes */,
+				8AF7553E1409611500A0E9B0 /* Default.png */,
+				8AA61B1714095CCA00F9EB1E /* bike.html */,
+				8AA61AF11409566E00F9EB1E /* BikeSharePro-Info.plist */,
+				8AA61AF21409566E00F9EB1E /* InfoPlist.strings */,
+				8AA61AF51409566E00F9EB1E /* main.m */,
+				8AA61AF71409566E00F9EB1E /* BikeSharePro-Prefix.pch */,
+				8AF755411409665700A0E9B0 /* bikes.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AF7554B140974A200A0E9B0 /* bikes */ = {
+			isa = PBXGroup;
+			children = (
+				8AF7554C140974A200A0E9B0 /* 2012Cobia.png */,
+				8AF7554D140974A200A0E9B0 /* 7200.png */,
+				8AF7554E140974A200A0E9B0 /* 7300WSD.png */,
+				8AF7554F140974A200A0E9B0 /* BGRoulux1.jpg */,
+				8AF75550140974A200A0E9B0 /* Hotrock20StreetBoys.jpg */,
+				8AF75551140974A200A0E9B0 /* Hotrock247-SpeedGirls.jpg */,
+				8AF75552140974A200A0E9B0 /* PureDeluxeTrike.png */,
+				8AF75553140974A200A0E9B0 /* RockhopperLTD29er.jpg */,
+				8AF75554140974A200A0E9B0 /* StumpjumperExpert29er.jpg */,
+				8AF75555140974A200A0E9B0 /* TopFuel97.png */,
+			);
+			path = bikes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AA61AE41409566E00F9EB1E /* BikeSharePro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AA61B061409566E00F9EB1E /* Build configuration list for PBXNativeTarget "BikeSharePro" */;
+			buildPhases = (
+				8AA61AE11409566E00F9EB1E /* Sources */,
+				8AA61AE21409566E00F9EB1E /* Frameworks */,
+				8AA61AE31409566E00F9EB1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BikeSharePro;
+			productName = BikeSharePro;
+			productReference = 8AA61AE51409566E00F9EB1E /* BikeSharePro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AA61ADC1409566E00F9EB1E /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 8AA61ADF1409566E00F9EB1E /* Build configuration list for PBXProject "BikeSharePro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8AA61ADA1409566E00F9EB1E;
+			productRefGroup = 8AA61AE61409566E00F9EB1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AA61AE41409566E00F9EB1E /* BikeSharePro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AA61AE31409566E00F9EB1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA61AF41409566E00F9EB1E /* InfoPlist.strings in Resources */,
+				8AA61AFD1409566E00F9EB1E /* MainWindow.xib in Resources */,
+				8AA61B031409566E00F9EB1E /* RootViewController.xib in Resources */,
+				8AA61B12140959AC00F9EB1E /* SettingsViewController.xib in Resources */,
+				8AA61B1814095CCA00F9EB1E /* bike.html in Resources */,
+				8AF7553F1409611500A0E9B0 /* Default.png in Resources */,
+				8AF755421409665700A0E9B0 /* bikes.plist in Resources */,
+				8AF7554714096B5700A0E9B0 /* CheckOutViewController.xib in Resources */,
+				8AF75556140974A200A0E9B0 /* 2012Cobia.png in Resources */,
+				8AF75557140974A200A0E9B0 /* 7200.png in Resources */,
+				8AF75558140974A200A0E9B0 /* 7300WSD.png in Resources */,
+				8AF75559140974A200A0E9B0 /* BGRoulux1.jpg in Resources */,
+				8AF7555A140974A200A0E9B0 /* Hotrock20StreetBoys.jpg in Resources */,
+				8AF7555B140974A200A0E9B0 /* Hotrock247-SpeedGirls.jpg in Resources */,
+				8AF7555C140974A200A0E9B0 /* PureDeluxeTrike.png in Resources */,
+				8AF7555D140974A200A0E9B0 /* RockhopperLTD29er.jpg in Resources */,
+				8AF7555E140974A200A0E9B0 /* StumpjumperExpert29er.jpg in Resources */,
+				8AF7555F140974A200A0E9B0 /* TopFuel97.png in Resources */,
+				8AF7556414097ABF00A0E9B0 /* BikeViewController.xib in Resources */,
+				8AF75569140980D700A0E9B0 /* SerialNumberView.xib in Resources */,
+				8AF7556B1409880A00A0E9B0 /* barcode.png in Resources */,
+				8AF7557014098E3A00A0E9B0 /* ReturnViewController.xib in Resources */,
+				8AF755781409A67D00A0E9B0 /* Icon.png in Resources */,
+				8AF755831409AF3B00A0E9B0 /* ReportView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AA61AE11409566E00F9EB1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA61AF61409566E00F9EB1E /* main.m in Sources */,
+				8AA61AFA1409566E00F9EB1E /* BikeShareProAppDelegate.m in Sources */,
+				8AA61B001409566E00F9EB1E /* RootViewController.m in Sources */,
+				8AA61B11140959AC00F9EB1E /* SettingsViewController.m in Sources */,
+				8AA61B1B14095D4200F9EB1E /* WebViewController.m in Sources */,
+				8AF7554614096B5700A0E9B0 /* CheckOutViewController.m in Sources */,
+				8AF7554A14096FAE00A0E9B0 /* CheckOutTableViewCell.m in Sources */,
+				8AF7556314097ABF00A0E9B0 /* BikeViewController.m in Sources */,
+				8AF75568140980D700A0E9B0 /* SerialNumberViewController.m in Sources */,
+				8AF7556F14098E3A00A0E9B0 /* ReturnViewController.m in Sources */,
+				8AF7557B1409AA0E00A0E9B0 /* ReportViewController.m in Sources */,
+				8AF7557E1409AA4A00A0E9B0 /* CellTextView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8AA61AF21409566E00F9EB1E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA61AF31409566E00F9EB1E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8AA61AFB1409566E00F9EB1E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA61AFC1409566E00F9EB1E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		8AA61B011409566E00F9EB1E /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA61B021409566E00F9EB1E /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AA61B041409566E00F9EB1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8AA61B051409566E00F9EB1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AA61B071409566E00F9EB1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BikeSharePro/BikeSharePro-Prefix.pch";
+				INFOPLIST_FILE = "BikeSharePro/BikeSharePro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8AA61B081409566E00F9EB1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BikeSharePro/BikeSharePro-Prefix.pch";
+				INFOPLIST_FILE = "BikeSharePro/BikeSharePro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AA61ADF1409566E00F9EB1E /* Build configuration list for PBXProject "BikeSharePro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA61B041409566E00F9EB1E /* Debug */,
+				8AA61B051409566E00F9EB1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AA61B061409566E00F9EB1E /* Build configuration list for PBXNativeTarget "BikeSharePro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA61B071409566E00F9EB1E /* Debug */,
+				8AA61B081409566E00F9EB1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AA61ADC1409566E00F9EB1E /* Project object */;
+}

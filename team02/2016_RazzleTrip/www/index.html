@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />-->
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <link rel="stylesheet" href="resources/jquery.mobile-1.0b2/jquery.mobile-1.0b2.min.css" />
+        <link rel="stylesheet" href="resources/razzletrip.css" />
+        
+        <script charset="utf-8" type="text/javascript" language="javascript" src="resources/phonegap-1.0.0.js"></script>
+        <script charset="utf-8" type="text/javascript" language="javascript" src="resources/jquery-1.6.2.min.js"></script>
+        <script charset="utf-8" type="text/javascript" language="javascript" src="resources/jquery-json-2.2.js"></script>
+        <script charset="utf-8" type="text/javascript" language="javascript" src="resources/jquery.mobile-1.0b2/jquery.mobile-1.0b2.min.js"></script>
+        <script charset="utf-8" type="text/javascript" language="javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script charset="utf-8" type="text/javascript" language="javascript" src="resources/razzletrip.js"></script>
+
+        <script type="text/javascript" language="javascript">
+
+            pageLoader = function() {
+                document.addEventListener("deviceready",onPageLoad,false);
+            };
+            
+        </script>
+
+    </head>
+
+    <body onload="pageLoader();">
+
+
+        <div id="route" data-role="page" data-title="Route">
+            
+            <div class="page-header" data-role="header">
+                <h1>RazzleTrip Quick Start</h1>
+            </div>
+
+            <div class="page-content" data-role="content">
+
+                <div>
+                    <p>Welcome to RazzleTrips! Please enter your trip information!</p>
+                </div>
+            
+                <ul data-role="listview">
+                    <li data-role="fieldcontain">
+                        <label for="search">Start:</label>
+                        <input type="search" name="password" id="source" value="[Current Position]" /> <!-- 1326 Kruger Avenue, Charleston, SC -->
+                    </li>
+
+                    <li data-role="fieldcontain">
+                        <label for="search">End:</label>
+                        <input type="search" name="password" id="destination" value="475 East Bay Street, Charleston, SC" />
+                    </li>
+
+                    <li data-role="fieldcontain">
+                        <label for="trafficToggle">Traffic:</label>
+                        <select name="slider" id="trafficSlider" data-role="slider">
+                            <option value="off">Off</option>
+                            <option value="on">On</option>
+                        </select> 
+                    </li>
+
+                     <li>
+                        <input id="route-save-button" type="button" value="Save" data-rel="back" />
+                    </li>
+            
+                </ul>
+
+            </div>
+
+            <div data-role="footer">&nbsp;</div>
+
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <div id="dash" data-role="page" data-title="RazzleTrip">
+            
+            <div data-role="header" data-position="fixed">
+                <h1>RazzleTrip</h1>
+                <a href="#route" data-icon="gear" data-rel="dialog"  data-inline="true"  class="ui-btn-right">Route</a>
+            </div>
+
+            <div data-role="content" id="dash-content" data-position="fixed">
+                
+                <div class="details-wrapper">
+                    <ul data-role="listview">
+                        <li>
+                            Time Remaining: <span id="time-remaining">Unknown</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="map-canvas"></div>
+
+                <div class="details-wrapper">
+                    
+                    <ul data-role="listview">
+                        <li id="time-slider-wrapper">
+                            <strong>VisualDrive:</strong> 
+                            <input type="range" name="slider" id="time-slider-input" value="0" min="0" max="0"  />
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                
+                <div data-role="navbar" class="ui-navbar" role="navigation">
+                    <ul>
+                        <li>
+                            <a href="#" data-icon="home">Dash</a>
+                        </li>
+                        <li>
+                            <a href="#" data-icon="star">Recalulate</a>
+                        </li>
+                        <li>
+                            <a href="#" data-icon="check">COP</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+        <div id="default" data-role="page" data-title="">
+            &nbsp;
+        </div>
+        
+
+    </body>
+</html>

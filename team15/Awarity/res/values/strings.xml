@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="hello">Hello World</string>
+    <string name="app_name">Awarity</string>
+    <string name="selected">You selected: </string>
+    <string name="description">description</string>
+    <string name="noselection">No item selected</string>
+    <string name="list_item">List Item</string>
+    <string name="new_task">New Task</string>
+    <string name="existing_task">Existing Task</string>
+    <string name="view_efforts">View Efforts</string>
+    <string name="enter_new_effort">Enter new effort...</string>
+    <string name="satisfaction">Satisfaction: </string>
+    <string name="enter_more_time">Enter minutes...</string>
+    <string name="in_minutes">In minutes...</string>
+    <string name="enter_time_spent">How much time have you spent?</string>
+    <string name="how_much_time">Do you need more time for this task?</string>
+    <string name="more_time">In minutes...</string>
+    <string name="progress_add_another">Add Another</string>
+    <string name="save_exit">Save and Exit</string>
+    <string name="save_complete">Complete</string>
+    <string name="progress_obstacles">Enter obstacles</string>
+    <string name="view_report">View Report</string>
+    <string name="exit">Exit</string>
+    <string name="done">Done</string>
+    <string name="task_name">Enter task name</string>
+    <string name="continueNew">Continue</string>
+    <string name="must_enter">Must enter value</string>
+    <string name="work_type">Enter work type: </string>
+    <string name="dependencies">Select Dependencies</string>
+    <string name="add_another">Add another</string>
+    <string name="time_allotted">How much time should be allotted for this task?</string>
+    <string name="sample_simple_list_selected">Selected: </string>
+    <string-array name="sample_simple_list_items">
+        <item>List Item 1</item>
+        <item>List Item 2</item>
+        <item>List Item 3</item>
+        <item>List Item 4</item>
+        <item>List Item 5</item>
+        <item>List Item 6</item>
+        <item>List Item 7</item>
+        <item>List Item 8</item>
+        <item>List Item 9</item>
+        <item>List Item 10</item>
+        <item>List Item 11</item>
+        <item>List Item 12</item>
+        <item>List Item 13</item>
+        <item>List Item 14</item>
+        <item>List Item 15</item>
+    </string-array>
+</resources>

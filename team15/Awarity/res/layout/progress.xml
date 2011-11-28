@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#ff310202"
+	android:padding="20px">
+	<EditText
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/progress_new_effort_et"
+		android:hint="@string/enter_new_effort" />
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/satisfaction" />
+	<RatingBar
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:numStars="5"
+		android:stepSize="1"
+		android:id="@+id/progress_satisfaction_ratebar" />
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/enter_time_spent" />
+	<EditText
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/progress_time_spent_et"
+		android:hint="@string/in_minutes"
+		android:inputType="phone" />
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/progress_obstacles_btn"
+		android:text="@string/progress_obstacles" />
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/how_much_time" />
+	<EditText
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/progress_more_time_et"
+		android:hint="@string/more_time"
+		android:inputType="phone" />
+		<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/progress_add_another_btn"
+			android:text="@string/progress_add_another" />
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/progress_add_another_btn"
+			android:id="@+id/progress_save_exit_btn"
+			android:text="@string/save_exit" />
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/progress_save_exit_btn"
+			android:id="@+id/progress_save_complete_btn"
+			android:text="@string/save_complete" />
+</RelativeLayout>
+</LinearLayout>

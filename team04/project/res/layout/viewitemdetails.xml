@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@drawable/grey" android:orientation="vertical"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:weightSum="1">
+	<TextView android:layout_centerHorizontal="true" android:id="@+id/textView1"
+		android:textSize="15sp" android:layout_width="wrap_content"
+		android:text="Please Confirm Your Item" android:layout_height="wrap_content"
+		android:textColor="#FFFFFF" android:layout_alignParentTop="true"></TextView>
+	<Button android:textColor="#FFFFFF" android:background="@drawable/custon_submitbutton"
+		android:id="@+id/confirm" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="Confirm"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true" android:layout_marginBottom="25dp"></Button>
+	<TextView
+		android:layout_centerHorizontal="true"
+		 android:id="@+id/product" android:textSize="15sp"
+		android:layout_width="wrap_content" android:text="Product Info Here"
+		android:layout_height="wrap_content" android:textColor="#FFFFFF"
+		android:layout_below="@+id/textView1"
+		android:layout_marginTop="39dp"></TextView>
+	<TextView android:id="@+id/textView3" android:textSize="15sp"
+		android:layout_width="wrap_content" android:text="Quantity"
+		android:layout_height="wrap_content" android:textColor="#FFFFFF"
+		android:layout_below="@+id/product" android:layout_centerHorizontal="true"
+		android:layout_marginTop="44dp"></TextView>
+	<EditText android:id="@+id/quantity" android:layout_width="50dp"
+		android:layout_height="50dp" android:layout_below="@+id/textView3"
+		android:layout_centerHorizontal="true"></EditText>
+	<ImageView android:layout_width="150dp" android:id="@+id/itempic" android:layout_height="150dp" android:layout_above="@+id/confirm" android:layout_centerHorizontal="true" android:layout_marginBottom="34dp"></ImageView>
+
+</RelativeLayout>

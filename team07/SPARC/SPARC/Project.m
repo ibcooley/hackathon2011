@@ -1,0 +1,27 @@
+//
+//  Project.m
+//  SPARC
+//
+//  Created by Michael McEvoy on 8/27/11.
+//  Copyright 2011 MUSC. All rights reserved.
+//
+
+#import "Project.h"
+
+@implementation Project
+
+@synthesize Stories = ivStories;
+@synthesize Title = ivTitle;
+@synthesize UserList = ivUserList;
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        // Initialization code here.
+    }
+    
+    return self;
+}
+
+@end

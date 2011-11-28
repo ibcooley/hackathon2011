@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/background">
+
+	<ImageView android:src="@drawable/photomatch" android:id="@+id/imageView1"
+		android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="100dp" android:layout_marginTop="20dp" android:layout_marginBottom="20dp"></ImageView>
+	<WebView android:id="@+id/oAuthWebView" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:visibility="gone"
+		android:layout_weight="1"></WebView>
+	<ImageButton android:src="@drawable/button"
+		android:layout_gravity="center_horizontal" android:id="@+id/connectButton"
+		android:layout_weight="1" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:background="@android:color/transparent"
+		android:maxHeight="80dp" android:scaleType="fitStart"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+		android:layout_marginTop="30dp"></ImageButton>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest android:versionCode="1" android:versionName="1.0"
+    package="com.awarity" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="8"/>
+    <application android:icon="@drawable/awarity" android:label="@string/app_name">
+        <activity android:label="@string/app_name" android:name="MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainSelection"/>
+        <activity android:name=".ChooseExisting"/>
+        <activity android:name=".Progress"/>
+        <activity android:name=".Barriers"/>
+        <activity android:name=".Closeout"/>
+        <activity android:name=".RateEfforts"/>
+        <activity android:name=".Report"/>
+        <activity android:name=".ViewEfforts"/>
+        <activity android:name=".NewDetails"/>
+        <activity android:name=".DependencyActivity"/>
+        <activity android:name=".Milestone04"/>
+    </application>
+</manifest>

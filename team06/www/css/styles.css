@@ -1,0 +1,20 @@
+.eventViewOptions li{
+    float:left;
+}
+
+.eventViewOptions{
+    width:200px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 20px;
+}
+
+.centerForm{
+    margin-left:auto;
+    margin-right:auto;
+    width:75%;
+}
+
+.clearFloat {
+    clear: both;
+}

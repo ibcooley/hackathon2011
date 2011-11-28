@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#ff310202"
+	android:padding="20px"
+	>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/work_type" />
+	<AutoCompleteTextView
+		android:id="@+id/new_details_work_type_actv"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+	<Button
+		android:id="@+id/new_details_dependencies_btn"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/dependencies" />
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/time_allotted" />
+	<EditText
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/new_details_time_allotted_et"
+		android:hint="@string/in_minutes"
+		android:inputType="phone" />
+	<Button
+		android:id="@+id/new_details_continue_btn"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/continueNew" />
+	<Button
+		android:id="@+id/new_details_exit_btn"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/exit" />
+
+</LinearLayout>

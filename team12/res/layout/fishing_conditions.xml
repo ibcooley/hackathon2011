@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <CheckedTextView android:layout_width="wrap_content" android:text="@string/weather_conditions" android:id="@+id/checkedTextView3" android:layout_height="wrap_content"></CheckedTextView>
+    <Spinner android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/conditions_weather"></Spinner>
+    <CheckedTextView android:layout_width="wrap_content" android:text="@string/type_of_fishing" android:id="@+id/checkedTextView1" android:layout_height="wrap_content"></CheckedTextView>
+    <Spinner android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/conditions_fishingtype"></Spinner>
+    <CheckedTextView android:layout_width="wrap_content" android:text="@string/type_of_bait" android:id="@+id/checkedTextView2" android:layout_height="wrap_content"></CheckedTextView>
+    <Spinner android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/conditions_baittype"></Spinner>
+    <CheckedTextView android:layout_width="wrap_content" android:text="@string/good_luck_save" android:id="@+id/checkedTextView6" android:layout_height="wrap_content"></CheckedTextView>
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save" android:id="@+id/conditions_save"></Button>
+    
+</LinearLayout>

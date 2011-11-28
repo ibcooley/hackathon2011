@@ -1,0 +1,43 @@
+// BeanShell Script to fetch classes showing up in Sonar violations report
+//
+
+// importCommands("foo.bsh");
+// addClassPath("foo.jar");  addClassPath("/some/directory");
+
+addClassPath("./commons-io-2.0.1.jar");
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.Calendar;
+import org.apache.commons.io.FileUtils;
+import java.io.File;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.HashMap;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+String html = "<div class=\"productTitle\"><a href=\"http://www.amazon.com/JAGERMEISTER-Jagermeister-Liqueur-70/dp/B005J0PCCC\"> Jagermeister Liqueur 70@</a> <span class=\"ptBrand\">by JAGERMEISTER</span></div>";
+
+		    Pattern pp = Pattern.compile("class=\"productTitle\"><.*>(.+)</a");
+			Matcher m  = pp.matcher(html);
+			try {
+			    if(m.find()) {
+			print (m.start());
+			print (m.group(1));
+			    }
+			}
+			catch (Exception e) {
+print ("FUCK: " + e.toString());
+			}
+
+		
+

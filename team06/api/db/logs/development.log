@@ -1,0 +1,4552 @@
+Jun 10 16:11:02 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255)) ;
+Jun 10 16:11:02 [info] CREATE UNIQUE INDEX idx_schema_migrations_version ON `schema_migrations`(`version`)
+Jun 10 16:11:02 [info] SELECT version FROM schema_migrations
+Jun 10 16:11:02 [info] SELECT version FROM schema_migrations
+Jun 10 16:11:02 [info] SELECT version FROM schema_migrations
+Jun 10 16:11:02 [info] CREATE TABLE `addfooddesc` (
+`foodCode` int(11),
+`seqNum` smallint,
+`additionalDescription` varchar(255),
+`lastMod` timestamp DEFAULT CURRENT_TIMESTAMP) ;
+Jun 10 16:11:02 [info] CREATE TABLE `AdultQuestionSetAnswers` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_question_sets_id` int(11),
+`question_answers_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:02 [info] CREATE TABLE `AdultQuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`question_set_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`question_set_level` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:02 [info] CREATE TABLE `AdultRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:03 [info] CREATE TABLE `annualUpdate` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`firstName` varchar(255),
+`middleName` varchar(255),
+`lastName` varchar(255),
+`phoneNumber` varchar(255),
+`faxNumber` varchar(255),
+`emailAddress` varchar(255),
+`website` varchar(255),
+`situation` text,
+`situationDescription` text,
+`situationTargetAudience` text,
+`curricula` text,
+`IOCTitle` varchar(255),
+`SSPPTitle` varchar(255),
+`SSPPDescription` text,
+`IOCDescription` text,
+`stateID` int(11),
+`focusID` int(11),
+`SSPPFocusID` int(11),
+`IOCFocusID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:03 [info] CREATE TABLE `annualUpdateCounties` (
+`annualUpdateID` int(11),
+`countyID` int(11)) ;
+Jun 10 16:11:03 [info] CREATE TABLE `annualUpdateFunds` (
+`annualUpdateID` int(11),
+`fundID` int(11),
+`val` varchar(255),
+`source` varchar(255)) ;
+Jun 10 16:11:03 [info] CREATE TABLE `annualUpdateImpacts` (
+`annualUpdateID` int(11),
+`impactID` int(11)) ;
+Jun 10 16:11:03 [info] CREATE TABLE `annualUpdateInvolvement` (
+`annualUpdateID` int(11),
+`involvementID` int(11),
+`amount` int(11)) ;
+Jun 10 16:11:03 [info] CREATE TABLE `annualUpdateParticipation` (
+`annualUpdateID` int(11),
+`participantID` int(11),
+`numberOfLocations` int(11),
+`numberOfPartnerships` int(11)) ;
+Jun 10 16:11:03 [info] CREATE TABLE `annualUpdatePriorities` (
+`annualUpdateID` int(11),
+`prioritiesID` int(11)) ;
+Jun 10 16:11:03 [info] CREATE TABLE `annualUpdateRelationship` (
+`annualUpdateID` int(11),
+`relationshipAgencyID` int(11),
+`relationshipTypeID` int(11)) ;
+Jun 10 16:11:03 [info] CREATE TABLE `CNPPFruits` (
+`foodCode` int(11),
+`FRTJUICE` varchar(255),
+`WHOLEFRT` int(11)) ;
+Jun 10 16:11:04 [info] CREATE TABLE `equiv0304` (
+`foodCode` int(11),
+`equivFlag` int(11),
+`modCode` int(11),
+`G_TOT` varchar(255),
+`G_WHL` varchar(255),
+`G_NWHL` varchar(255),
+`V_TOT` varchar(255),
+`V_DRKGR` varchar(255),
+`V_ORANGE` varchar(255),
+`V_POTATO` varchar(255),
+`V_STARCY` varchar(255),
+`V_TOMATO` varchar(255),
+`V_OTHER` varchar(255),
+`F_TOT` varchar(255),
+`F_CITMLB` varchar(255),
+`F_OTHER` varchar(255),
+`D_TOT` varchar(255),
+`D_MILK` varchar(255),
+`D_YOGURT` varchar(255),
+`D_CHEESE` varchar(255),
+`M_MPF` varchar(255),
+`M_MEAT` varchar(255),
+`M_ORGAN` varchar(255),
+`M_FRANK` varchar(255),
+`M_POULT` varchar(255),
+`M_FISH_HI` varchar(255),
+`M_FISH_LO` varchar(255),
+`M_EGG` varchar(255),
+`M_SOY` varchar(255),
+`M_NUTSD` varchar(255),
+`LEGUMES` varchar(255),
+`DISCFAT_OIL` varchar(255),
+`DISCFAT_SOL` varchar(255),
+`ADD_SUG` varchar(255),
+`A_BEV` varchar(255)) ;
+Jun 10 16:11:04 [info] CREATE TABLE `fdbPyramid` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`pyramidName` varchar(255),
+`groupID` int(11),
+`pyramidDescription` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:04 [info] CREATE TABLE `filter` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`title` varchar(255),
+`type` varchar(255),
+`income_not_specified` int(11),
+`race_and_or` varchar(255),
+`demoQuery` text,
+`subgroupQuery` text,
+`paQuery` text,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:04 [info] CREATE TABLE `filterAddressVerification` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`verified` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:04 [info] CREATE TABLE `filterAge` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_age` int(11),
+`low_age` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:04 [info] CREATE TABLE `filterBreastfeeding` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`breastfeeding` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:04 [info] CREATE TABLE `filterChildAges` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_age` int(11),
+`low_age` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:04 [info] CREATE TABLE `filterChildren` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`low_children` int(11),
+`high_children` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:04 [info] CREATE TABLE `filterContacts` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_contacts` int(11),
+`low_contacts` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:04 [info] CREATE TABLE `filterEntry` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`start_date` varchar(255),
+`end_date` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:05 [info] CREATE TABLE `filterEthnicity` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`ethnic_code` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:05 [info] CREATE TABLE `filterExit` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`start_date` varchar(255),
+`end_date` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:05 [info] CREATE TABLE `filterGrade` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`grade_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:05 [info] CREATE TABLE `filterIncome` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_income` int(11),
+`low_income` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:05 [info] CREATE TABLE `filterLesson` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`lesson_type` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:05 [info] CREATE TABLE `filterLessons` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_lessons` int(11),
+`low_lessons` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:05 [info] CREATE TABLE `filterMonthsInProgram` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`low_months` int(11),
+`high_months` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:05 [info] CREATE TABLE `filterPoverty` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`low_percent` float,
+`high_percent` float,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:05 [info] CREATE TABLE `filterPregnancy` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`pregnancy` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:06 [info] CREATE TABLE `filterProgramStatus` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`program_status` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:06 [info] CREATE TABLE `filterPublicAssistance` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`public_assistance_id` int(11),
+`public_assistance_type` varchar(255),
+`public_assistance_value` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:06 [info] CREATE TABLE `filterRace` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`race_code` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:06 [info] CREATE TABLE `filterResidence` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`residence_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:06 [info] CREATE TABLE `filterSex` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`sex` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:06 [info] CREATE TABLE `filterSubGroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`subgroup_id` int(11),
+`subgroup_type` varchar(255),
+`subgroup_value` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:06 [info] CREATE TABLE `filterSubRace` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`sub_race_id` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:06 [info] CREATE TABLE `fnddsnutval` (
+`foodCode` int(11),
+`nutrientCode` smallint,
+`nutrientValue` int(11)) ;
+Jun 10 16:11:06 [info] CREATE TABLE `FNDDSRecCount` (
+`fullFileName` varchar(255),
+`no_of_records` int(11)) ;
+Jun 10 16:11:06 [info] CREATE TABLE `fnddssrlinks` (
+`foodCode` int(11),
+`seqNum` smallint,
+`SRCode` int(11),
+`SRDescription` varchar(255),
+`amount` int(11),
+`measure` varchar(255),
+`portionCode` int(11),
+`retentionCode` smallint,
+`flag` smallint,
+`weight` int(11),
+`changeTypeToSRCode` varchar(255),
+`changeTypeToWeight` varchar(255),
+`changeTypeToRetnCode` varchar(255)) ;
+Jun 10 16:11:07 [info] CREATE TABLE `focus` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`locationID` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:07 [info] CREATE TABLE `focusItems` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`focusID` int(11),
+`typeID` int(11),
+`otherID` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:07 [info] CREATE TABLE `focusLocation` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`description` varchar(255),
+`typeID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:07 [info] CREATE TABLE `focusOutcomes` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`termType` int(11),
+`focusItemID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:07 [info] CREATE TABLE `focusType` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`focusDescription` varchar(255),
+`typeID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:07 [info] CREATE TABLE `foodCalorieLevels` (
+`ageLo` int(11),
+`ageHi` smallint,
+`M1` smallint,
+`M2` smallint,
+`M3` smallint,
+`F1` smallint,
+`F2` smallint,
+`F3` smallint) ;
+Jun 10 16:11:07 [info] CREATE TABLE `foodIntakePatterns` (
+`calorieLevel` int(11),
+`fruits` float,
+`vegetables` float,
+`grains` float,
+`meatBeans` float,
+`milk` float,
+`oils` float,
+`DCA` smallint) ;
+Jun 10 16:11:07 [info] CREATE TABLE `foodportiondesc` (
+`portionCode` int(11),
+`portionDescription` varchar(255),
+`changeType` varchar(255)) ;
+Jun 10 16:11:07 [info] CREATE TABLE `foodsubcodelinks` (
+`foodCode` int(11),
+`subCode` int(11)) ;
+Jun 10 16:11:07 [info] CREATE TABLE `foodweights` (
+`foodCode` int(11),
+`subCode` int(11),
+`seqNum` smallint,
+`portionCode` int(11),
+`portionWeight` int(11),
+`changeType` varchar(255)) ;
+Jun 10 16:11:08 [info] CREATE TABLE `funds` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:08 [info] CREATE TABLE `gramWeights` (
+`foodCode` int(11),
+`subCode` int(11),
+`measureCode` int(11),
+`gramWeight` int(11)) ;
+Jun 10 16:11:08 [info] CREATE TABLE `HEIScores` (
+`component` varchar(255),
+`score` varchar(255),
+`standard` int(11)) ;
+Jun 10 16:11:08 [info] CREATE TABLE `involvement` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:08 [info] CREATE TABLE `mainfooddesc` (
+`foodCode` int(11),
+`mainFoodDesc` varchar(255),
+`abbrDesc` varchar(255)) ;
+Jun 10 16:11:08 [info] CREATE TABLE `measureDescriptions` (
+`measureCode` int(11),
+`description` varchar(255)) ;
+Jun 10 16:11:08 [info] CREATE TABLE `measurementUnit` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:08 [info] CREATE TABLE `moistnfatadjust` (
+`foodCode` int(11),
+`moistureChange` int(11),
+`fatChange` int(11),
+`typeOfFat` int(11)) ;
+Jun 10 16:11:08 [info] CREATE TABLE `nutdesc` (
+`nutrientCode` smallint,
+`nutrientDesc` varchar(255),
+`tagName` varchar(255),
+`unit` varchar(255),
+`decimals` smallint) ;
+Jun 10 16:11:09 [info] CREATE TABLE `nutrientDescription` (
+`nutrientCode` int(11),
+`nutrientDescription` varchar(255),
+`unitOfMeasure` varchar(255)) ;
+Jun 10 16:11:09 [info] CREATE TABLE `nutrientRecommendedValue` (
+`peopleCode` int(11),
+`nutrientCode` int(11),
+`nutrientRecommendedValue` int(11)) ;
+Jun 10 16:11:09 [info] CREATE TABLE `nutrientValues` (
+`foodCode` int(11),
+`nutrientCode` int(11),
+`nutrientValue` float) ;
+Jun 10 16:11:09 [info] CREATE TABLE `otherDefinition` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`definition` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:09 [info] CREATE TABLE `participants` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:09 [info] CREATE TABLE `Permissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:09 [info] CREATE TABLE `person` (
+`peopleCode` int(11),
+`age` varchar(255),
+`sex` varchar(255)) ;
+Jun 10 16:11:09 [info] CREATE TABLE `programImpacts` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`paraprofessional` tinyint(1),
+`professional` tinyint(1),
+`volunteer` tinyint(1),
+`coordinator` tinyint(1),
+`partner` tinyint(1),
+`adultParticipant` tinyint(1),
+`pregnantTeen` tinyint(1),
+`youthParticipant` tinyint(1),
+`otherPeople` tinyint(1),
+`otherPeopleDesc` varchar(255),
+`afterSchool` tinyint(1),
+`military` tinyint(1),
+`pregnancy` tinyint(1),
+`weightLoss` tinyint(1),
+`otherKey` tinyint(1),
+`otherKeyDesc` varchar(255),
+`background` text,
+`outcomesOrImpacts` text,
+`focusID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:09 [info] CREATE TABLE `programPriorities` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`description` text,
+`measurement` text,
+`measurementUnitID` int(11),
+`measurementUnitOther` varchar(255),
+`target2` varchar(255),
+`target3` varchar(255),
+`target4` varchar(255),
+`target5` varchar(255),
+`actual1` varchar(255),
+`actual2` varchar(255),
+`actual3` varchar(255),
+`actual4` varchar(255),
+`actual5` varchar(255),
+`comments` text,
+`focusID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:09 [info] CREATE TABLE `publicAssistance` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`active` tinyint(1),
+`foodAssistance` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`creator_id` int(11),
+`status` tinyint(1),
+`description` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:10 [info] CREATE TABLE `pyramidDesc` (
+`pyramidID` int(11),
+`pyramidName` varchar(255),
+`groupID` int(11),
+`pyramidDescription` varchar(255)) ;
+Jun 10 16:11:10 [info] CREATE TABLE `pyramidLinks` (
+`foodCode` int(11),
+`value` varchar(255),
+`pyramidID` int(11)) ;
+Jun 10 16:11:10 [info] CREATE TABLE `pyramidStandards` (
+`calorieLevel` int(11),
+`fruits` varchar(255),
+`vegetables` varchar(255),
+`grains` varchar(255),
+`milk` varchar(255),
+`meatAndBeans` varchar(255),
+`oils` varchar(255),
+`DC` varchar(255)) ;
+Jun 10 16:11:10 [info] CREATE TABLE `querServing` (
+`foodCode` int(11),
+`varCode` int(11),
+`servings` float,
+`servings23` float) ;
+Jun 10 16:11:10 [info] CREATE TABLE `QuestionAnswers` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`question_id` int(11),
+`answer` varchar(255),
+`answer_type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:10 [info] CREATE TABLE `Questions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`question` varchar(255),
+`questiontype_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:10 [info] CREATE TABLE `QuestionSetQuestions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`question_set_id` int(11),
+`question_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`question_level` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:10 [info] CREATE TABLE `QuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`created_by_user_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:10 [info] CREATE TABLE `QuestionTypes` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:11 [info] CREATE TABLE `recommendedServings` (
+`age` varchar(255),
+`gender` varchar(255),
+`energy` int(11),
+`grains` float,
+`vegetables` float,
+`fruits` float,
+`milk` float,
+`meat` float,
+`thiamin` float,
+`riboflavin` float,
+`niacin` float,
+`vitamin_b6` float,
+`vitamin_b1` float,
+`vitamin_e` float,
+`phosphorus` int(11)) ;
+Jun 10 16:11:11 [info] CREATE TABLE `RegionCounties` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`region_id` int(11),
+`state_county_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:11 [info] CREATE TABLE `Regions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:11 [info] CREATE TABLE `RegUserPermissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`reg_user_id` int(11),
+`permission_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:11 [info] CREATE TABLE `relationshipAgencies` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`description` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:11 [info] CREATE TABLE `relationshipTypes` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`description` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:11 [info] CREATE TABLE `Roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:11 [info] CREATE TABLE `skips` (
+`skipWord` varchar(255)) ;
+Jun 10 16:11:11 [info] CREATE TABLE `Staff` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+`ppid` int(11),
+`name` varchar(255),
+`address1` varchar(255),
+`address2` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` varchar(255),
+`phone` varchar(255),
+`phoneExt` varchar(255),
+`sex` varchar(255),
+`hispanicCode` int(11),
+`raceCodeBinary` int(11),
+`age` varchar(255),
+`alumni` tinyint(1),
+`instructs` tinyint(1),
+`advises` tinyint(1),
+`edRole` tinyint(1),
+`supports` tinyint(1),
+`midManager` tinyint(1),
+`EFNEPHours` int(11),
+`FSNEPHours` int(11),
+`projectXHours` int(11),
+`otherHours` int(11),
+`EFNEPYouthHours` int(11),
+`FSNEPYouthHours` int(11),
+`projectXYouthHours` int(11),
+`otherYouthHours` int(11),
+`lastMod` varchar(255),
+`creator_user_id` int(11),
+`status` tinyint(1),
+`ageCode` varchar(255),
+ PRIMARY KEY (`uid`)) ;
+Jun 10 16:11:11 [info] CREATE TABLE `StaffRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`staff_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:12 [info] CREATE TABLE `subcodedesc` (
+`Subcode` int(11)) ;
+Jun 10 16:11:12 [info] CREATE TABLE `subGroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`description` text,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`creator_id` int(11),
+`status` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:12 [info] CREATE TABLE `tbladult` (
+`AdultKey` int(11),
+`AdultID` int(11),
+`StaffID` varchar(255),
+`SortName` varchar(255),
+`Address1` varchar(255),
+`Address2` varchar(255),
+`City` varchar(255),
+`State` varchar(255),
+`ZIP` varchar(255),
+`Phone` varchar(255),
+`PhoneExt` varchar(255),
+`Sex` varchar(255),
+`isPregnant` blob,
+`isNursing` blob,
+`Age` smallint,
+`Income` varchar(255),
+`HispanicCode` tinyint(1),
+`RaceCodeBinary` int(11),
+`SubRace` int(11),
+`TownSize` smallint,
+`ChildrenAges` varchar(255),
+`nChildren` tinyint(1),
+`nOtherFamily` tinyint(1),
+`nFamilyTotal` smallint,
+`EntryDate` datetime,
+`LessonType` smallint,
+`LessonCount` smallint,
+`ContactCount` smallint,
+`HiGrade` smallint,
+`ProgramStatus` smallint,
+`ExitDate` datetime,
+`EFNEPhelp` tinyint(1),
+`RecallEntry` datetime,
+`RecallExit` datetime,
+`nRecalls` smallint,
+`idRecallEntry` int(11),
+`idRecallExit` int(11),
+`hasE4Recalls` tinyint(1),
+`CKlistEntry` datetime,
+`CKListExit` datetime,
+`nCkLists` smallint,
+`idCKListEntry` int(11),
+`idCKListExit` int(11),
+`setID` varchar(255),
+`havePrenatal` tinyint(1),
+`haveBF` tinyint(1),
+`Remarks` varchar(255),
+`isSelected` tinyint(1),
+`AddressStatus` tinyint(1),
+`DateAddressVerified` datetime,
+`CountyName` varchar(255),
+`CountyFIPS` varchar(255),
+`CongressionalDistrict` varchar(255),
+`MSA` varchar(255),
+`Latitude` int(11),
+`Longitude` int(11),
+`LastMod` datetime,
+`first_name` varchar(255),
+`last_name` int(11),
+`status` tinyint(1),
+`hours` int(11)) ;
+Jun 10 16:11:12 [info] CREATE TABLE `tblAdultDefault` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` varchar(255),
+`residenceSize` int(11),
+`lessonType` int(11),
+`creator_id` int(11),
+`status` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:12 [info] CREATE TABLE `tblAdultDefaultSubgroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_default_id` int(11),
+`subgroup_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`subgroup_type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:12 [info] CREATE TABLE `tblAdultPublicAssistanceEntry` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`public_assistance_id` int(11),
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:12 [info] CREATE TABLE `tblAdultPublicAssistanceExit` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`public_assistance_id` int(11),
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:12 [info] CREATE TABLE `tblAdultSubGroups` (
+`subGroupId` int(11),
+`adultID` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`subgroupType` varchar(255)) ;
+Jun 10 16:11:12 [info] CREATE TABLE `tblrecall` (
+`RecallKey` int(11),
+`AdultKey` int(11),
+`RecallDate` varchar(255),
+`NutritionMethod` varchar(255),
+`RecallSource` tinyint(1),
+`isPregnant` tinyint(1),
+`isNursing` tinyint(1),
+`takesSupplements` tinyint(1),
+`FoodCost` int(11),
+`ActivityLevel` tinyint(1),
+`isExit` tinyint(1),
+`nMeals` smallint,
+`Fruits` int(11),
+`Vegetables` int(11),
+`Grains` int(11),
+`Meats` int(11),
+`Milk` int(11),
+`D_MILK` int(11),
+`F_TOT` int(11),
+`G_TOT` int(11),
+`G_WHL` int(11),
+`MEATBEANS` int(11),
+`HEIOILS` int(11),
+`SATFAT` int(11),
+`SODIUM` int(11),
+`SoFAAS` int(11),
+`T_VEG` int(11),
+`V_DGOL` int(11),
+`WHOLEFRT` int(11),
+`HEI_TOTAL` int(11),
+`FreezeCode` smallint,
+`doFreeze` tinyint(1),
+`LastMod` varchar(255)) ;
+Jun 10 16:11:13 [info] CREATE TABLE `tblrecallfooditems` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`recallKey` int(11),
+`itemSeq` smallint,
+`mealType` tinyint(1),
+`foodCode` int(11),
+`Qty` int(11),
+`portionCode` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:13 [info] CREATE TABLE `terms` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`term` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:13 [info] CREATE TABLE `userAdultDefaults` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`adultDefaultId` int(11),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:13 [info] CREATE TABLE `userAdults` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`adult_id` int(11),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:13 [info] CREATE TABLE `userFilters` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`filter_id` int(11),
+`filter_type` varchar(255),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:13 [info] CREATE TABLE `UserParents` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`user_parent_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:13 [info] CREATE TABLE `UserPermissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`permission_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:13 [info] CREATE TABLE `userPublicAssistance` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`public_assistance_id` int(11),
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`can_view` int(11),
+`can_edit` int(11),
+`can_delete` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:13 [info] CREATE TABLE `UserQuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`question_set_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:13 [info] CREATE TABLE `UserRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:14 [info] CREATE TABLE `UserRoles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`role_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:14 [info] CREATE TABLE `userStaff` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`staff_id` int(11),
+`can_view` tinyint(1),
+`can_edit` int(11),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:14 [info] CREATE TABLE `userSubgroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`subgroup_id` int(11),
+`user_id` int(11),
+`type` varchar(255),
+`can_view` int(11),
+`can_edit` int(11),
+`can_delete` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:14 [info] CREATE TABLE `userYouthGroupDefaults` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`youth_group_default_id` int(11),
+`can_view` int(11),
+`can_edit` int(11),
+`can_delete` int(11),
+`date_create` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:14 [info] CREATE TABLE `userYouthgroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`youth_group_id` int(11),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:14 [info] CREATE TABLE `YouthGroup` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`groupID` int(11),
+`name` varchar(255),
+`delivery` varchar(255),
+`program` varchar(255),
+`leaderID` int(11),
+`isGroup` varchar(255),
+`groupMailingName` varchar(255),
+`address1` varchar(255),
+`address2` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` int(11),
+`phone` int(11),
+`phoneExt` varchar(255),
+`numberOfMeetings` int(11),
+`numberOfLessons` int(11),
+`contactHours` int(11),
+`numberOfYouthInOther4H` int(11),
+`start` varchar(255),
+`end` varchar(255),
+`groupTotal` int(11),
+`numberMales` int(11),
+`numberFemales` int(11),
+`remarks` text,
+`addressStatus` int(11),
+`dateAddressVerified` varchar(255),
+`countyName` varchar(255),
+`countyFips` int(11),
+`congressionalID` int(11),
+`MSA` int(11),
+`latitude` varchar(255),
+`longitude` varchar(255),
+`useInd1` varchar(255),
+`useInd2` varchar(255),
+`useInd3` varchar(255),
+`useInd4` varchar(255),
+`eatVariety` varchar(255),
+`knowledge` varchar(255),
+`selectFood` varchar(255),
+`practices` varchar(255),
+`lastMod` varchar(255),
+ PRIMARY KEY (`uid`)) ;
+Jun 10 16:11:14 [info] CREATE TABLE `youthGroupDefault` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` varchar(255),
+`status` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:14 [info] CREATE TABLE `YouthGroupItems` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`youthGroupUID` int(11),
+`dataType` varchar(255),
+`dataItem` int(11),
+`dataValue` int(11),
+ PRIMARY KEY (`uid`)) ;
+Jun 10 16:11:14 [info] CREATE TABLE `YouthGroupQuestionSetAnswers` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:14 [info] CREATE TABLE `YouthGroupQuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`youthgroup_id` int(11),
+`question_set_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`question_set_level` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:15 [info] CREATE TABLE `YouthGroupRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`youth_group_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:15 [info] CREATE TABLE `YouthGroupStaff` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`groupUID` int(11),
+`rank` int(11),
+`staffUID` int(11),
+ PRIMARY KEY (`uid`)) ;
+Jun 10 16:11:15 [info] CREATE TABLE `YouthGroupSubRaces` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`youth_group_id` int(11),
+`sub_race_id` int(11),
+`sub_race_count` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 10 16:11:15 [info] INSERT INTO schema_migrations (version) VALUES ('20110610200530')
+Jun 10 16:13:59 [info] SELECT version FROM schema_migrations
+Jun 10 16:13:59 [info] SELECT version FROM schema_migrations
+Jun 10 16:13:59 [info] SELECT version FROM schema_migrations
+Jun 10 16:13:59 [info] LOCK TABLES `focusType` WRITE;
+Jun 10 16:13:59 [info] INSERT INTO `focusType` (`id`,`focusDescription`,`typeID`)
+		VALUES
+			(1,'Diet Quality/Physical Activity',1),
+			(2,'Food Resource Management',1),
+			(3,'Food Safety',1),
+			(4,'Food Security',1),
+			(5,'Family/Interpersonal Relationships',0),
+			(6,'Institution, Organization, Community',0),
+			(7,'Social Structure, Policy, Practice',0),
+			(8,'Management/Leadership',0),
+			(9,'Other (describe)',1);
+Jun 10 16:13:59 [info] UNLOCK TABLES;
+Jun 10 16:13:59 [info] INSERT INTO schema_migrations (version) VALUES ('20110610201228')
+Jun 13 16:37:56 [info] SELECT version FROM schema_migrations
+Jun 13 16:37:56 [info] SELECT version FROM schema_migrations
+Jun 13 16:37:56 [info] SELECT version FROM schema_migrations
+Jun 13 16:37:56 [info] CREATE TABLE `RegionPublicAssistance` (
+`region_id` int(11),
+`public_assistance_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 13 16:37:57 [info] INSERT INTO schema_migrations (version) VALUES ('20110613203312')
+Jun 13 16:50:20 [info] SELECT version FROM schema_migrations
+Jun 13 16:50:20 [info] SELECT version FROM schema_migrations
+Jun 13 16:50:20 [info] SELECT version FROM schema_migrations
+Jun 13 16:50:20 [info] CREATE TABLE `RegionSubgroups` (
+`region_id` int(11),
+`subgroup_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 13 16:50:20 [info] INSERT INTO schema_migrations (version) VALUES ('20110613204937')
+Jun 13 16:55:31 [info] SELECT version FROM schema_migrations
+Jun 13 16:55:31 [info] SELECT version FROM schema_migrations
+Jun 13 16:55:31 [info] SELECT version FROM schema_migrations
+Jun 13 16:55:31 [info] CREATE TABLE `RegionAdultDefaults` (
+`region_id` int(11),
+`adult_defuault_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 13 16:55:31 [info] INSERT INTO schema_migrations (version) VALUES ('20110613205448')
+Jun 14 15:24:50 [info] SELECT version FROM schema_migrations
+Jun 14 15:24:50 [info] SELECT version FROM schema_migrations
+Jun 14 15:24:50 [info] SELECT version FROM schema_migrations
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `addfooddesc`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `CNPPFruits`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `equiv0304`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `fdbPyramid`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `fnddsnutval`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `FNDDSRecCount`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `fnddssrlinks`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `foodCalorieLevels`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `foodIntakePatterns`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `foodportiondesc`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `foodsubcodelinks`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `foodweights`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `gramWeights`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `involvement`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `mainfooddesc`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `measureDescriptions`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `measurementUnit`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `moistnfatadjust`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `nutdesc`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `nutrientDescription`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `nutrientRecommendedValue`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `nutrientValues`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `otherDefinition`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `participants`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `person`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `pyramidDesc`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `PyramidLinks`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `PyramidStandards`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `querServing`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `recommendedServings`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `relationshipAgencies`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `relationshipTypes`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `skips`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `subcodedesc`
+Jun 14 15:24:50 [info] DROP TABLE IF EXISTS `terms`
+Jun 14 15:24:50 [info] INSERT INTO schema_migrations (version) VALUES ('20110614154819')
+Jun 14 15:24:50 [info] ALTER TABLE tblrecall ADD `SoFAS` decimal(10, 5)
+Jun 14 15:24:50 [info] ALTER TABLE tblrecall ADD `refined_grains` decimal(10, 5)
+Jun 14 15:24:50 [info] ALTER TABLE tblrecall ADD `sat_fat` decimal(10, 5)
+Jun 14 15:24:50 [info] ALTER TABLE tblrecall ADD `seafood` decimal(10, 5)
+Jun 14 15:24:51 [info] ALTER TABLE tblrecall ADD `oils` decimal(10, 5)
+Jun 14 15:24:51 [info] ALTER TABLE tblrecall ADD `folate` decimal(10, 5)
+Jun 14 15:24:51 [info] ALTER TABLE tblrecall ADD `iron` decimal(10, 5)
+Jun 14 15:24:51 [info] ALTER TABLE tblrecall ADD `food_energy` decimal(10, 5)
+Jun 14 15:24:51 [info] ALTER TABLE tblrecall ADD `fiber` decimal(10, 5)
+Jun 14 15:24:51 [info] ALTER TABLE tblrecall ADD `potassium` decimal(10, 5)
+Jun 14 15:24:52 [info] ALTER TABLE tblrecall ADD `calcium` decimal(10, 5)
+Jun 14 15:24:52 [info] ALTER TABLE tblrecall ADD `total_sodium` decimal(10, 5)
+Jun 14 15:24:52 [info] ALTER TABLE tblrecall ADD `total_protein` decimal(10, 5)
+Jun 14 15:24:52 [info] INSERT INTO schema_migrations (version) VALUES ('20110614180452')
+Jun 16 12:47:16 [info] SELECT version FROM schema_migrations
+Jun 16 12:47:16 [info] SELECT version FROM schema_migrations
+Jun 16 12:47:16 [info] SELECT version FROM schema_migrations
+Jun 16 12:47:28 [info] SELECT version FROM schema_migrations
+Jun 16 12:54:11 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255)) ;
+Jun 16 12:54:11 [info] CREATE UNIQUE INDEX idx_schema_migrations_version ON `schema_migrations`(`version`)
+Jun 16 12:54:11 [info] SELECT version FROM schema_migrations
+Jun 16 12:54:11 [info] SELECT version FROM schema_migrations
+Jun 16 12:54:11 [info] SELECT version FROM schema_migrations
+Jun 16 12:54:11 [info] CREATE TABLE `addfooddesc` (
+`foodCode` int(11),
+`seqNum` smallint,
+`additionalDescription` varchar(255),
+`lastMod` timestamp DEFAULT CURRENT_TIMESTAMP) ;
+Jun 16 12:54:11 [info] CREATE TABLE `AdultQuestionSetAnswers` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_question_sets_id` int(11),
+`question_answers_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:11 [info] CREATE TABLE `AdultQuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`question_set_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`question_set_level` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:11 [info] CREATE TABLE `AdultRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:11 [info] CREATE TABLE `annualUpdate` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`firstName` varchar(255),
+`middleName` varchar(255),
+`lastName` varchar(255),
+`phoneNumber` varchar(255),
+`faxNumber` varchar(255),
+`emailAddress` varchar(255),
+`website` varchar(255),
+`situation` text,
+`situationDescription` text,
+`situationTargetAudience` text,
+`curricula` text,
+`IOCTitle` varchar(255),
+`SSPPTitle` varchar(255),
+`SSPPDescription` text,
+`IOCDescription` text,
+`stateID` int(11),
+`focusID` int(11),
+`SSPPFocusID` int(11),
+`IOCFocusID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:11 [info] CREATE TABLE `annualUpdateCounties` (
+`annualUpdateID` int(11),
+`countyID` int(11)) ;
+Jun 16 12:54:11 [info] CREATE TABLE `annualUpdateFunds` (
+`annualUpdateID` int(11),
+`fundID` int(11),
+`val` varchar(255),
+`source` varchar(255)) ;
+Jun 16 12:54:11 [info] CREATE TABLE `annualUpdateImpacts` (
+`annualUpdateID` int(11),
+`impactID` int(11)) ;
+Jun 16 12:54:12 [info] CREATE TABLE `annualUpdateInvolvement` (
+`annualUpdateID` int(11),
+`involvementID` int(11),
+`amount` int(11)) ;
+Jun 16 12:54:12 [info] CREATE TABLE `annualUpdateParticipation` (
+`annualUpdateID` int(11),
+`participantID` int(11),
+`numberOfLocations` int(11),
+`numberOfPartnerships` int(11)) ;
+Jun 16 12:54:12 [info] CREATE TABLE `annualUpdatePriorities` (
+`annualUpdateID` int(11),
+`prioritiesID` int(11)) ;
+Jun 16 12:54:12 [info] CREATE TABLE `annualUpdateRelationship` (
+`annualUpdateID` int(11),
+`relationshipAgencyID` int(11),
+`relationshipTypeID` int(11)) ;
+Jun 16 12:54:12 [info] CREATE TABLE `CNPPFruits` (
+`foodCode` int(11),
+`FRTJUICE` varchar(255),
+`WHOLEFRT` int(11)) ;
+Jun 16 12:54:12 [info] CREATE TABLE `equiv0304` (
+`foodCode` int(11),
+`equivFlag` int(11),
+`modCode` int(11),
+`G_TOT` varchar(255),
+`G_WHL` varchar(255),
+`G_NWHL` varchar(255),
+`V_TOT` varchar(255),
+`V_DRKGR` varchar(255),
+`V_ORANGE` varchar(255),
+`V_POTATO` varchar(255),
+`V_STARCY` varchar(255),
+`V_TOMATO` varchar(255),
+`V_OTHER` varchar(255),
+`F_TOT` varchar(255),
+`F_CITMLB` varchar(255),
+`F_OTHER` varchar(255),
+`D_TOT` varchar(255),
+`D_MILK` varchar(255),
+`D_YOGURT` varchar(255),
+`D_CHEESE` varchar(255),
+`M_MPF` varchar(255),
+`M_MEAT` varchar(255),
+`M_ORGAN` varchar(255),
+`M_FRANK` varchar(255),
+`M_POULT` varchar(255),
+`M_FISH_HI` varchar(255),
+`M_FISH_LO` varchar(255),
+`M_EGG` varchar(255),
+`M_SOY` varchar(255),
+`M_NUTSD` varchar(255),
+`LEGUMES` varchar(255),
+`DISCFAT_OIL` varchar(255),
+`DISCFAT_SOL` varchar(255),
+`ADD_SUG` varchar(255),
+`A_BEV` varchar(255)) ;
+Jun 16 12:54:12 [info] CREATE TABLE `fdbPyramid` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`pyramidName` varchar(255),
+`groupID` int(11),
+`pyramidDescription` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:12 [info] CREATE TABLE `filter` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`title` varchar(255),
+`type` varchar(255),
+`income_not_specified` int(11),
+`race_and_or` varchar(255),
+`demoQuery` text,
+`subgroupQuery` text,
+`paQuery` text,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:12 [info] CREATE TABLE `filterAddressVerification` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`verified` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:13 [info] CREATE TABLE `filterAge` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_age` int(11),
+`low_age` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:13 [info] CREATE TABLE `filterBreastfeeding` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`breastfeeding` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:13 [info] CREATE TABLE `filterChildAges` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_age` int(11),
+`low_age` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:13 [info] CREATE TABLE `filterChildren` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`low_children` int(11),
+`high_children` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:13 [info] CREATE TABLE `filterContacts` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_contacts` int(11),
+`low_contacts` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:13 [info] CREATE TABLE `filterEntry` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`start_date` varchar(255),
+`end_date` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:13 [info] CREATE TABLE `filterEthnicity` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`ethnic_code` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:13 [info] CREATE TABLE `filterExit` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`start_date` varchar(255),
+`end_date` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:13 [info] CREATE TABLE `filterGrade` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`grade_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:14 [info] CREATE TABLE `filterIncome` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_income` int(11),
+`low_income` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:14 [info] CREATE TABLE `filterLesson` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`lesson_type` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:14 [info] CREATE TABLE `filterLessons` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_lessons` int(11),
+`low_lessons` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:14 [info] CREATE TABLE `filterMonthsInProgram` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`low_months` int(11),
+`high_months` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:14 [info] CREATE TABLE `filterPoverty` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`low_percent` float,
+`high_percent` float,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:14 [info] CREATE TABLE `filterPregnancy` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`pregnancy` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:14 [info] CREATE TABLE `filterProgramStatus` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`program_status` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:14 [info] CREATE TABLE `filterPublicAssistance` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`public_assistance_id` int(11),
+`public_assistance_type` varchar(255),
+`public_assistance_value` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:14 [info] CREATE TABLE `filterRace` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`race_code` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:14 [info] CREATE TABLE `filterResidence` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`residence_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:15 [info] CREATE TABLE `filterSex` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`sex` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:15 [info] CREATE TABLE `filterSubGroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`subgroup_id` int(11),
+`subgroup_type` varchar(255),
+`subgroup_value` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:15 [info] CREATE TABLE `filterSubRace` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`sub_race_id` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:15 [info] CREATE TABLE `fnddsnutval` (
+`foodCode` int(11),
+`nutrientCode` smallint,
+`nutrientValue` int(11)) ;
+Jun 16 12:54:15 [info] CREATE TABLE `FNDDSRecCount` (
+`fullFileName` varchar(255),
+`no_of_records` int(11)) ;
+Jun 16 12:54:15 [info] CREATE TABLE `fnddssrlinks` (
+`foodCode` int(11),
+`seqNum` smallint,
+`SRCode` int(11),
+`SRDescription` varchar(255),
+`amount` int(11),
+`measure` varchar(255),
+`portionCode` int(11),
+`retentionCode` smallint,
+`flag` smallint,
+`weight` int(11),
+`changeTypeToSRCode` varchar(255),
+`changeTypeToWeight` varchar(255),
+`changeTypeToRetnCode` varchar(255)) ;
+Jun 16 12:54:15 [info] CREATE TABLE `focus` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`locationID` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:15 [info] CREATE TABLE `focusItems` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`focusID` int(11),
+`typeID` int(11),
+`otherID` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:15 [info] CREATE TABLE `focusLocation` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`description` varchar(255),
+`typeID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:16 [info] CREATE TABLE `focusOutcomes` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`termType` int(11),
+`focusItemID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:16 [info] CREATE TABLE `focusType` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`focusDescription` varchar(255),
+`typeID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:16 [info] CREATE TABLE `foodCalorieLevels` (
+`ageLo` int(11),
+`ageHi` smallint,
+`M1` smallint,
+`M2` smallint,
+`M3` smallint,
+`F1` smallint,
+`F2` smallint,
+`F3` smallint) ;
+Jun 16 12:54:16 [info] CREATE TABLE `foodIntakePatterns` (
+`calorieLevel` int(11),
+`fruits` float,
+`vegetables` float,
+`grains` float,
+`meatBeans` float,
+`milk` float,
+`oils` float,
+`DCA` smallint) ;
+Jun 16 12:54:16 [info] CREATE TABLE `foodportiondesc` (
+`portionCode` int(11),
+`portionDescription` varchar(255),
+`changeType` varchar(255)) ;
+Jun 16 12:54:16 [info] CREATE TABLE `foodsubcodelinks` (
+`foodCode` int(11),
+`subCode` int(11)) ;
+Jun 16 12:54:16 [info] CREATE TABLE `foodweights` (
+`foodCode` int(11),
+`subCode` int(11),
+`seqNum` smallint,
+`portionCode` int(11),
+`portionWeight` int(11),
+`changeType` varchar(255)) ;
+Jun 16 12:54:16 [info] CREATE TABLE `funds` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:16 [info] CREATE TABLE `gramWeights` (
+`foodCode` int(11),
+`subCode` int(11),
+`measureCode` int(11),
+`gramWeight` int(11)) ;
+Jun 16 12:54:17 [info] CREATE TABLE `HEIScores` (
+`component` varchar(255),
+`score` varchar(255),
+`standard` int(11)) ;
+Jun 16 12:54:17 [info] CREATE TABLE `involvement` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:17 [info] CREATE TABLE `mainfooddesc` (
+`foodCode` int(11),
+`mainFoodDesc` varchar(255),
+`abbrDesc` varchar(255)) ;
+Jun 16 12:54:17 [info] CREATE TABLE `measureDescriptions` (
+`measureCode` int(11),
+`description` varchar(255)) ;
+Jun 16 12:54:17 [info] CREATE TABLE `measurementUnit` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:17 [info] CREATE TABLE `moistnfatadjust` (
+`foodCode` int(11),
+`moistureChange` int(11),
+`fatChange` int(11),
+`typeOfFat` int(11)) ;
+Jun 16 12:54:17 [info] CREATE TABLE `nutdesc` (
+`nutrientCode` smallint,
+`nutrientDesc` varchar(255),
+`tagName` varchar(255),
+`unit` varchar(255),
+`decimals` smallint) ;
+Jun 16 12:54:17 [info] CREATE TABLE `nutrientDescription` (
+`nutrientCode` int(11),
+`nutrientDescription` varchar(255),
+`unitOfMeasure` varchar(255)) ;
+Jun 16 12:54:17 [info] CREATE TABLE `nutrientRecommendedValue` (
+`peopleCode` int(11),
+`nutrientCode` int(11),
+`nutrientRecommendedValue` int(11)) ;
+Jun 16 12:54:17 [info] CREATE TABLE `nutrientValues` (
+`foodCode` int(11),
+`nutrientCode` int(11),
+`nutrientValue` float) ;
+Jun 16 12:54:18 [info] CREATE TABLE `otherDefinition` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`definition` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:18 [info] CREATE TABLE `participants` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:18 [info] CREATE TABLE `Permissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:18 [info] CREATE TABLE `person` (
+`peopleCode` int(11),
+`age` varchar(255),
+`sex` varchar(255)) ;
+Jun 16 12:54:18 [info] CREATE TABLE `programImpacts` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`paraprofessional` tinyint(1),
+`professional` tinyint(1),
+`volunteer` tinyint(1),
+`coordinator` tinyint(1),
+`partner` tinyint(1),
+`adultParticipant` tinyint(1),
+`pregnantTeen` tinyint(1),
+`youthParticipant` tinyint(1),
+`otherPeople` tinyint(1),
+`otherPeopleDesc` varchar(255),
+`afterSchool` tinyint(1),
+`military` tinyint(1),
+`pregnancy` tinyint(1),
+`weightLoss` tinyint(1),
+`otherKey` tinyint(1),
+`otherKeyDesc` varchar(255),
+`background` text,
+`outcomesOrImpacts` text,
+`focusID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:18 [info] CREATE TABLE `programPriorities` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`description` text,
+`measurement` text,
+`measurementUnitID` int(11),
+`measurementUnitOther` varchar(255),
+`target2` varchar(255),
+`target3` varchar(255),
+`target4` varchar(255),
+`target5` varchar(255),
+`actual1` varchar(255),
+`actual2` varchar(255),
+`actual3` varchar(255),
+`actual4` varchar(255),
+`actual5` varchar(255),
+`comments` text,
+`focusID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:18 [info] CREATE TABLE `publicAssistance` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`active` tinyint(1),
+`foodAssistance` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`creator_id` int(11),
+`status` tinyint(1),
+`description` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:18 [info] CREATE TABLE `pyramidDesc` (
+`pyramidID` int(11),
+`pyramidName` varchar(255),
+`groupID` int(11),
+`pyramidDescription` varchar(255)) ;
+Jun 16 12:54:18 [info] CREATE TABLE `pyramidLinks` (
+`foodCode` int(11),
+`value` varchar(255),
+`pyramidID` int(11)) ;
+Jun 16 12:54:18 [info] CREATE TABLE `pyramidStandards` (
+`calorieLevel` int(11),
+`fruits` varchar(255),
+`vegetables` varchar(255),
+`grains` varchar(255),
+`milk` varchar(255),
+`meatAndBeans` varchar(255),
+`oils` varchar(255),
+`DC` varchar(255)) ;
+Jun 16 12:54:19 [info] CREATE TABLE `querServing` (
+`foodCode` int(11),
+`varCode` int(11),
+`servings` float,
+`servings23` float) ;
+Jun 16 12:54:19 [info] CREATE TABLE `QuestionAnswers` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`question_id` int(11),
+`answer` varchar(255),
+`answer_type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:19 [info] CREATE TABLE `Questions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`question` varchar(255),
+`questiontype_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:19 [info] CREATE TABLE `QuestionSetQuestions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`question_set_id` int(11),
+`question_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`question_level` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:19 [info] CREATE TABLE `QuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`created_by_user_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:19 [info] CREATE TABLE `QuestionTypes` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:19 [info] CREATE TABLE `recommendedServings` (
+`age` varchar(255),
+`gender` varchar(255),
+`energy` int(11),
+`grains` float,
+`vegetables` float,
+`fruits` float,
+`milk` float,
+`meat` float,
+`thiamin` float,
+`riboflavin` float,
+`niacin` float,
+`vitamin_b6` float,
+`vitamin_b1` float,
+`vitamin_e` float,
+`phosphorus` int(11)) ;
+Jun 16 12:54:19 [info] CREATE TABLE `RegionCounties` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`region_id` int(11),
+`state_county_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:19 [info] CREATE TABLE `Regions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:20 [info] CREATE TABLE `RegUserPermissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`reg_user_id` int(11),
+`permission_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:20 [info] CREATE TABLE `relationshipAgencies` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`description` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:20 [info] CREATE TABLE `relationshipTypes` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`description` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:20 [info] CREATE TABLE `Roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:20 [info] CREATE TABLE `skips` (
+`skipWord` varchar(255)) ;
+Jun 16 12:54:20 [info] CREATE TABLE `Staff` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+`ppid` int(11),
+`name` varchar(255),
+`address1` varchar(255),
+`address2` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` varchar(255),
+`phone` varchar(255),
+`phoneExt` varchar(255),
+`sex` varchar(255),
+`hispanicCode` int(11),
+`raceCodeBinary` int(11),
+`age` varchar(255),
+`alumni` tinyint(1),
+`instructs` tinyint(1),
+`advises` tinyint(1),
+`edRole` tinyint(1),
+`supports` tinyint(1),
+`midManager` tinyint(1),
+`EFNEPHours` int(11),
+`FSNEPHours` int(11),
+`projectXHours` int(11),
+`otherHours` int(11),
+`EFNEPYouthHours` int(11),
+`FSNEPYouthHours` int(11),
+`projectXYouthHours` int(11),
+`otherYouthHours` int(11),
+`lastMod` varchar(255),
+`creator_user_id` int(11),
+`status` tinyint(1),
+`ageCode` varchar(255),
+ PRIMARY KEY (`uid`)) ;
+Jun 16 12:54:20 [info] CREATE TABLE `StaffRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`staff_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:20 [info] CREATE TABLE `subcodedesc` (
+`Subcode` int(11)) ;
+Jun 16 12:54:20 [info] CREATE TABLE `subGroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`description` text,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`creator_id` int(11),
+`status` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:21 [info] CREATE TABLE `tbladult` (
+`AdultKey` int(11),
+`AdultID` int(11),
+`StaffID` varchar(255),
+`SortName` varchar(255),
+`Address1` varchar(255),
+`Address2` varchar(255),
+`City` varchar(255),
+`State` varchar(255),
+`ZIP` varchar(255),
+`Phone` varchar(255),
+`PhoneExt` varchar(255),
+`Sex` varchar(255),
+`isPregnant` blob,
+`isNursing` blob,
+`Age` smallint,
+`Income` varchar(255),
+`HispanicCode` tinyint(1),
+`RaceCodeBinary` int(11),
+`SubRace` int(11),
+`TownSize` smallint,
+`ChildrenAges` varchar(255),
+`nChildren` tinyint(1),
+`nOtherFamily` tinyint(1),
+`nFamilyTotal` smallint,
+`EntryDate` datetime,
+`LessonType` smallint,
+`LessonCount` smallint,
+`ContactCount` smallint,
+`HiGrade` smallint,
+`ProgramStatus` smallint,
+`ExitDate` datetime,
+`EFNEPhelp` tinyint(1),
+`RecallEntry` datetime,
+`RecallExit` datetime,
+`nRecalls` smallint,
+`idRecallEntry` int(11),
+`idRecallExit` int(11),
+`hasE4Recalls` tinyint(1),
+`CKlistEntry` datetime,
+`CKListExit` datetime,
+`nCkLists` smallint,
+`idCKListEntry` int(11),
+`idCKListExit` int(11),
+`setID` varchar(255),
+`havePrenatal` tinyint(1),
+`haveBF` tinyint(1),
+`Remarks` varchar(255),
+`isSelected` tinyint(1),
+`AddressStatus` tinyint(1),
+`DateAddressVerified` datetime,
+`CountyName` varchar(255),
+`CountyFIPS` varchar(255),
+`CongressionalDistrict` varchar(255),
+`MSA` varchar(255),
+`Latitude` int(11),
+`Longitude` int(11),
+`LastMod` datetime,
+`first_name` varchar(255),
+`last_name` int(11),
+`status` tinyint(1),
+`hours` int(11)) ;
+Jun 16 12:54:21 [info] CREATE TABLE `tblAdultDefault` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` varchar(255),
+`residenceSize` int(11),
+`lessonType` int(11),
+`creator_id` int(11),
+`status` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:21 [info] CREATE TABLE `tblAdultDefaultSubgroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_default_id` int(11),
+`subgroup_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`subgroup_type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:21 [info] CREATE TABLE `tblAdultPublicAssistanceEntry` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`public_assistance_id` int(11),
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:21 [info] CREATE TABLE `tblAdultPublicAssistanceExit` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`public_assistance_id` int(11),
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:21 [info] CREATE TABLE `tblAdultSubGroups` (
+`subGroupId` int(11),
+`adultID` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`subgroupType` varchar(255)) ;
+Jun 16 12:54:21 [info] CREATE TABLE `tblrecall` (
+`RecallKey` int(11),
+`AdultKey` int(11),
+`RecallDate` varchar(255),
+`NutritionMethod` varchar(255),
+`RecallSource` tinyint(1),
+`isPregnant` tinyint(1),
+`isNursing` tinyint(1),
+`takesSupplements` tinyint(1),
+`FoodCost` int(11),
+`ActivityLevel` tinyint(1),
+`isExit` tinyint(1),
+`nMeals` smallint,
+`Fruits` int(11),
+`Vegetables` int(11),
+`Grains` int(11),
+`Meats` int(11),
+`Milk` int(11),
+`D_MILK` int(11),
+`F_TOT` int(11),
+`G_TOT` int(11),
+`G_WHL` int(11),
+`MEATBEANS` int(11),
+`HEIOILS` int(11),
+`SATFAT` int(11),
+`SODIUM` int(11),
+`SoFAAS` int(11),
+`T_VEG` int(11),
+`V_DGOL` int(11),
+`WHOLEFRT` int(11),
+`HEI_TOTAL` int(11),
+`FreezeCode` smallint,
+`doFreeze` tinyint(1),
+`LastMod` varchar(255)) ;
+Jun 16 12:54:21 [info] CREATE TABLE `tblrecallfooditems` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`recallKey` int(11),
+`itemSeq` smallint,
+`mealType` tinyint(1),
+`foodCode` int(11),
+`Qty` int(11),
+`portionCode` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:21 [info] CREATE TABLE `terms` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`term` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:22 [info] CREATE TABLE `userAdultDefaults` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`adultDefaultId` int(11),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:22 [info] CREATE TABLE `userAdults` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`adult_id` int(11),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:22 [info] CREATE TABLE `userFilters` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`filter_id` int(11),
+`filter_type` varchar(255),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:22 [info] CREATE TABLE `UserParents` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`user_parent_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:22 [info] CREATE TABLE `UserPermissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`permission_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:22 [info] CREATE TABLE `userPublicAssistance` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`public_assistance_id` int(11),
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`can_view` int(11),
+`can_edit` int(11),
+`can_delete` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:22 [info] CREATE TABLE `UserQuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`question_set_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:22 [info] CREATE TABLE `UserRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:22 [info] CREATE TABLE `UserRoles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`role_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:23 [info] CREATE TABLE `userStaff` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`staff_id` int(11),
+`can_view` tinyint(1),
+`can_edit` int(11),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:23 [info] CREATE TABLE `userSubgroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`subgroup_id` int(11),
+`user_id` int(11),
+`type` varchar(255),
+`can_view` int(11),
+`can_edit` int(11),
+`can_delete` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:23 [info] CREATE TABLE `userYouthGroupDefaults` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`youth_group_default_id` int(11),
+`can_view` int(11),
+`can_edit` int(11),
+`can_delete` int(11),
+`date_create` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:23 [info] CREATE TABLE `userYouthgroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`youth_group_id` int(11),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:23 [info] CREATE TABLE `YouthGroup` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`groupID` int(11),
+`name` varchar(255),
+`delivery` varchar(255),
+`program` varchar(255),
+`leaderID` int(11),
+`isGroup` varchar(255),
+`groupMailingName` varchar(255),
+`address1` varchar(255),
+`address2` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` int(11),
+`phone` int(11),
+`phoneExt` varchar(255),
+`numberOfMeetings` int(11),
+`numberOfLessons` int(11),
+`contactHours` int(11),
+`numberOfYouthInOther4H` int(11),
+`start` varchar(255),
+`end` varchar(255),
+`groupTotal` int(11),
+`numberMales` int(11),
+`numberFemales` int(11),
+`remarks` text,
+`addressStatus` int(11),
+`dateAddressVerified` varchar(255),
+`countyName` varchar(255),
+`countyFips` int(11),
+`congressionalID` int(11),
+`MSA` int(11),
+`latitude` varchar(255),
+`longitude` varchar(255),
+`useInd1` varchar(255),
+`useInd2` varchar(255),
+`useInd3` varchar(255),
+`useInd4` varchar(255),
+`eatVariety` varchar(255),
+`knowledge` varchar(255),
+`selectFood` varchar(255),
+`practices` varchar(255),
+`lastMod` varchar(255),
+ PRIMARY KEY (`uid`)) ;
+Jun 16 12:54:23 [info] CREATE TABLE `youthGroupDefault` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` varchar(255),
+`status` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:23 [info] CREATE TABLE `YouthGroupItems` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`youthGroupUID` int(11),
+`dataType` varchar(255),
+`dataItem` int(11),
+`dataValue` int(11),
+ PRIMARY KEY (`uid`)) ;
+Jun 16 12:54:23 [info] CREATE TABLE `YouthGroupQuestionSetAnswers` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:24 [info] CREATE TABLE `YouthGroupQuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`youthgroup_id` int(11),
+`question_set_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`question_set_level` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:24 [info] CREATE TABLE `YouthGroupRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`youth_group_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:24 [info] CREATE TABLE `YouthGroupStaff` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`groupUID` int(11),
+`rank` int(11),
+`staffUID` int(11),
+ PRIMARY KEY (`uid`)) ;
+Jun 16 12:54:24 [info] CREATE TABLE `YouthGroupSubRaces` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`youth_group_id` int(11),
+`sub_race_id` int(11),
+`sub_race_count` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:24 [info] INSERT INTO schema_migrations (version) VALUES ('20110610200530')
+Jun 16 12:54:24 [info] LOCK TABLES `focusType` WRITE;
+Jun 16 12:54:24 [info] INSERT INTO `focusType` (`id`,`focusDescription`,`typeID`)
+		VALUES
+			(1,'Diet Quality/Physical Activity',1),
+			(2,'Food Resource Management',1),
+			(3,'Food Safety',1),
+			(4,'Food Security',1),
+			(5,'Family/Interpersonal Relationships',0),
+			(6,'Institution, Organization, Community',0),
+			(7,'Social Structure, Policy, Practice',0),
+			(8,'Management/Leadership',0),
+			(9,'Other (describe)',1);
+Jun 16 12:54:24 [info] UNLOCK TABLES;
+Jun 16 12:54:24 [info] INSERT INTO schema_migrations (version) VALUES ('20110610201228')
+Jun 16 12:54:24 [info] CREATE TABLE `RegionPublicAssistance` (
+`region_id` int(11),
+`public_assistance_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:24 [info] INSERT INTO schema_migrations (version) VALUES ('20110613203312')
+Jun 16 12:54:24 [info] CREATE TABLE `RegionSubgroups` (
+`region_id` int(11),
+`subgroup_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:24 [info] INSERT INTO schema_migrations (version) VALUES ('20110613204937')
+Jun 16 12:54:24 [info] CREATE TABLE `RegionAdultDefaults` (
+`region_id` int(11),
+`adult_defuault_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 16 12:54:24 [info] INSERT INTO schema_migrations (version) VALUES ('20110613205448')
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `addfooddesc`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `CNPPFruits`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `equiv0304`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `fdbPyramid`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `fnddsnutval`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `FNDDSRecCount`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `fnddssrlinks`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `foodCalorieLevels`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `foodIntakePatterns`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `foodportiondesc`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `foodsubcodelinks`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `foodweights`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `gramWeights`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `involvement`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `mainfooddesc`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `measureDescriptions`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `measurementUnit`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `moistnfatadjust`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `nutdesc`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `nutrientDescription`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `nutrientRecommendedValue`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `nutrientValues`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `otherDefinition`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `participants`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `person`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `pyramidDesc`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `PyramidLinks`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `PyramidStandards`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `querServing`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `recommendedServings`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `relationshipAgencies`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `relationshipTypes`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `skips`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `subcodedesc`
+Jun 16 12:54:24 [info] DROP TABLE IF EXISTS `terms`
+Jun 16 12:54:24 [info] INSERT INTO schema_migrations (version) VALUES ('20110614154819')
+Jun 16 12:54:25 [info] ALTER TABLE tblrecall ADD `SoFAS` decimal(10, 5)
+Jun 16 12:54:25 [info] ALTER TABLE tblrecall ADD `refined_grains` decimal(10, 5)
+Jun 16 12:54:25 [info] ALTER TABLE tblrecall ADD `sat_fat` decimal(10, 5)
+Jun 16 12:54:25 [info] ALTER TABLE tblrecall ADD `seafood` decimal(10, 5)
+Jun 16 12:54:25 [info] ALTER TABLE tblrecall ADD `oils` decimal(10, 5)
+Jun 16 12:54:25 [info] ALTER TABLE tblrecall ADD `folate` decimal(10, 5)
+Jun 16 12:54:25 [info] ALTER TABLE tblrecall ADD `iron` decimal(10, 5)
+Jun 16 12:54:25 [info] ALTER TABLE tblrecall ADD `food_energy` decimal(10, 5)
+Jun 16 12:54:25 [info] ALTER TABLE tblrecall ADD `fiber` decimal(10, 5)
+Jun 16 12:54:26 [info] ALTER TABLE tblrecall ADD `potassium` decimal(10, 5)
+Jun 16 12:54:26 [info] ALTER TABLE tblrecall ADD `calcium` decimal(10, 5)
+Jun 16 12:54:26 [info] ALTER TABLE tblrecall ADD `total_sodium` decimal(10, 5)
+Jun 16 12:54:26 [info] ALTER TABLE tblrecall ADD `total_protein` decimal(10, 5)
+Jun 16 12:54:26 [info] INSERT INTO schema_migrations (version) VALUES ('20110614180452')
+Jun 16 16:25:44 [info] SELECT version FROM schema_migrations
+Jun 16 16:25:44 [info] SELECT version FROM schema_migrations
+Jun 16 16:25:44 [info] SELECT version FROM schema_migrations
+Jun 16 16:25:44 [info] SHOW COLUMNS FROM `RegionAdultDefaults` LIKE 'adult_defuault_id'
+Jun 16 16:25:44 [info] ALTER TABLE `RegionAdultDefaults` CHANGE `adult_defuault_id` `adult_default_id` int(11)
+Jun 16 16:25:44 [info] INSERT INTO schema_migrations (version) VALUES ('20110616201742')
+Jun 16 16:38:44 [info] SELECT version FROM schema_migrations
+Jun 16 16:38:44 [info] SELECT version FROM schema_migrations
+Jun 16 16:38:44 [info] SELECT version FROM schema_migrations
+Jun 16 16:38:44 [info] DROP TABLE IF EXISTS `UserPermissions`
+Jun 16 16:38:44 [info] DROP TABLE IF EXISTS `UserParents`
+Jun 16 16:38:44 [info] INSERT INTO schema_migrations (version) VALUES ('20110616202800')
+Jun 16 17:04:58 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255)) ;
+Jun 16 17:04:58 [info] CREATE UNIQUE INDEX idx_schema_migrations_version ON `schema_migrations`(`version`)
+Jun 16 17:04:58 [info] SELECT version FROM schema_migrations
+Jun 16 17:04:58 [info] SELECT version FROM schema_migrations
+Jun 16 17:04:58 [info] SELECT version FROM schema_migrations
+Jun 16 17:04:59 [info] CREATE TABLE `addfooddesc` (
+`foodCode` int(11),
+`seqNum` smallint,
+`additionalDescription` varchar(255),
+`lastMod` timestamp DEFAULT CURRENT_TIMESTAMP) ;
+Jun 16 17:04:59 [info] CREATE TABLE `AdultQuestionSetAnswers` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_question_sets_id` int(11),
+`question_answers_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:04:59 [info] CREATE TABLE `AdultQuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`question_set_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`question_set_level` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:04:59 [info] CREATE TABLE `AdultRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:04:59 [info] CREATE TABLE `annualUpdate` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`firstName` varchar(255),
+`middleName` varchar(255),
+`lastName` varchar(255),
+`phoneNumber` varchar(255),
+`faxNumber` varchar(255),
+`emailAddress` varchar(255),
+`website` varchar(255),
+`situation` text,
+`situationDescription` text,
+`situationTargetAudience` text,
+`curricula` text,
+`IOCTitle` varchar(255),
+`SSPPTitle` varchar(255),
+`SSPPDescription` text,
+`IOCDescription` text,
+`stateID` int(11),
+`focusID` int(11),
+`SSPPFocusID` int(11),
+`IOCFocusID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:04:59 [info] CREATE TABLE `annualUpdateCounties` (
+`annualUpdateID` int(11),
+`countyID` int(11)) ;
+Jun 16 17:04:59 [info] CREATE TABLE `annualUpdateFunds` (
+`annualUpdateID` int(11),
+`fundID` int(11),
+`val` varchar(255),
+`source` varchar(255)) ;
+Jun 16 17:04:59 [info] CREATE TABLE `annualUpdateImpacts` (
+`annualUpdateID` int(11),
+`impactID` int(11)) ;
+Jun 16 17:04:59 [info] CREATE TABLE `annualUpdateInvolvement` (
+`annualUpdateID` int(11),
+`involvementID` int(11),
+`amount` int(11)) ;
+Jun 16 17:04:59 [info] CREATE TABLE `annualUpdateParticipation` (
+`annualUpdateID` int(11),
+`participantID` int(11),
+`numberOfLocations` int(11),
+`numberOfPartnerships` int(11)) ;
+Jun 16 17:05:00 [info] CREATE TABLE `annualUpdatePriorities` (
+`annualUpdateID` int(11),
+`prioritiesID` int(11)) ;
+Jun 16 17:05:00 [info] CREATE TABLE `annualUpdateRelationship` (
+`annualUpdateID` int(11),
+`relationshipAgencyID` int(11),
+`relationshipTypeID` int(11)) ;
+Jun 16 17:05:00 [info] CREATE TABLE `CNPPFruits` (
+`foodCode` int(11),
+`FRTJUICE` varchar(255),
+`WHOLEFRT` int(11)) ;
+Jun 16 17:05:00 [info] CREATE TABLE `equiv0304` (
+`foodCode` int(11),
+`equivFlag` int(11),
+`modCode` int(11),
+`G_TOT` varchar(255),
+`G_WHL` varchar(255),
+`G_NWHL` varchar(255),
+`V_TOT` varchar(255),
+`V_DRKGR` varchar(255),
+`V_ORANGE` varchar(255),
+`V_POTATO` varchar(255),
+`V_STARCY` varchar(255),
+`V_TOMATO` varchar(255),
+`V_OTHER` varchar(255),
+`F_TOT` varchar(255),
+`F_CITMLB` varchar(255),
+`F_OTHER` varchar(255),
+`D_TOT` varchar(255),
+`D_MILK` varchar(255),
+`D_YOGURT` varchar(255),
+`D_CHEESE` varchar(255),
+`M_MPF` varchar(255),
+`M_MEAT` varchar(255),
+`M_ORGAN` varchar(255),
+`M_FRANK` varchar(255),
+`M_POULT` varchar(255),
+`M_FISH_HI` varchar(255),
+`M_FISH_LO` varchar(255),
+`M_EGG` varchar(255),
+`M_SOY` varchar(255),
+`M_NUTSD` varchar(255),
+`LEGUMES` varchar(255),
+`DISCFAT_OIL` varchar(255),
+`DISCFAT_SOL` varchar(255),
+`ADD_SUG` varchar(255),
+`A_BEV` varchar(255)) ;
+Jun 16 17:05:00 [info] CREATE TABLE `fdbPyramid` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`pyramidName` varchar(255),
+`groupID` int(11),
+`pyramidDescription` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:00 [info] CREATE TABLE `filter` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`title` varchar(255),
+`type` varchar(255),
+`income_not_specified` int(11),
+`race_and_or` varchar(255),
+`demoQuery` text,
+`subgroupQuery` text,
+`paQuery` text,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:00 [info] CREATE TABLE `filterAddressVerification` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`verified` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:00 [info] CREATE TABLE `filterAge` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_age` int(11),
+`low_age` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:00 [info] CREATE TABLE `filterBreastfeeding` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`breastfeeding` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:00 [info] CREATE TABLE `filterChildAges` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_age` int(11),
+`low_age` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:01 [info] CREATE TABLE `filterChildren` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`low_children` int(11),
+`high_children` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:01 [info] CREATE TABLE `filterContacts` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_contacts` int(11),
+`low_contacts` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:01 [info] CREATE TABLE `filterEntry` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`start_date` varchar(255),
+`end_date` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:01 [info] CREATE TABLE `filterEthnicity` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`ethnic_code` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:01 [info] CREATE TABLE `filterExit` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`start_date` varchar(255),
+`end_date` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:01 [info] CREATE TABLE `filterGrade` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`grade_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:01 [info] CREATE TABLE `filterIncome` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_income` int(11),
+`low_income` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:01 [info] CREATE TABLE `filterLesson` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`lesson_type` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:02 [info] CREATE TABLE `filterLessons` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_lessons` int(11),
+`low_lessons` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:02 [info] CREATE TABLE `filterMonthsInProgram` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`low_months` int(11),
+`high_months` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:02 [info] CREATE TABLE `filterPoverty` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`low_percent` float,
+`high_percent` float,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:02 [info] CREATE TABLE `filterPregnancy` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`pregnancy` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:02 [info] CREATE TABLE `filterProgramStatus` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`program_status` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:02 [info] CREATE TABLE `filterPublicAssistance` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`public_assistance_id` int(11),
+`public_assistance_type` varchar(255),
+`public_assistance_value` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:02 [info] CREATE TABLE `filterRace` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`race_code` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:02 [info] CREATE TABLE `filterResidence` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`residence_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:02 [info] CREATE TABLE `filterSex` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`sex` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:02 [info] CREATE TABLE `filterSubGroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`subgroup_id` int(11),
+`subgroup_type` varchar(255),
+`subgroup_value` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:03 [info] CREATE TABLE `filterSubRace` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`sub_race_id` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:03 [info] CREATE TABLE `fnddsnutval` (
+`foodCode` int(11),
+`nutrientCode` smallint,
+`nutrientValue` int(11)) ;
+Jun 16 17:05:03 [info] CREATE TABLE `FNDDSRecCount` (
+`fullFileName` varchar(255),
+`no_of_records` int(11)) ;
+Jun 16 17:05:03 [info] CREATE TABLE `fnddssrlinks` (
+`foodCode` int(11),
+`seqNum` smallint,
+`SRCode` int(11),
+`SRDescription` varchar(255),
+`amount` int(11),
+`measure` varchar(255),
+`portionCode` int(11),
+`retentionCode` smallint,
+`flag` smallint,
+`weight` int(11),
+`changeTypeToSRCode` varchar(255),
+`changeTypeToWeight` varchar(255),
+`changeTypeToRetnCode` varchar(255)) ;
+Jun 16 17:05:03 [info] CREATE TABLE `focus` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`locationID` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:03 [info] CREATE TABLE `focusItems` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`focusID` int(11),
+`typeID` int(11),
+`otherID` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:03 [info] CREATE TABLE `focusLocation` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`description` varchar(255),
+`typeID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:03 [info] CREATE TABLE `focusOutcomes` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`termType` int(11),
+`focusItemID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:04 [info] CREATE TABLE `focusType` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`focusDescription` varchar(255),
+`typeID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:04 [info] CREATE TABLE `foodCalorieLevels` (
+`ageLo` int(11),
+`ageHi` smallint,
+`M1` smallint,
+`M2` smallint,
+`M3` smallint,
+`F1` smallint,
+`F2` smallint,
+`F3` smallint) ;
+Jun 16 17:05:04 [info] CREATE TABLE `foodIntakePatterns` (
+`calorieLevel` int(11),
+`fruits` float,
+`vegetables` float,
+`grains` float,
+`meatBeans` float,
+`milk` float,
+`oils` float,
+`DCA` smallint) ;
+Jun 16 17:05:04 [info] CREATE TABLE `foodportiondesc` (
+`portionCode` int(11),
+`portionDescription` varchar(255),
+`changeType` varchar(255)) ;
+Jun 16 17:05:04 [info] CREATE TABLE `foodsubcodelinks` (
+`foodCode` int(11),
+`subCode` int(11)) ;
+Jun 16 17:05:04 [info] CREATE TABLE `foodweights` (
+`foodCode` int(11),
+`subCode` int(11),
+`seqNum` smallint,
+`portionCode` int(11),
+`portionWeight` int(11),
+`changeType` varchar(255)) ;
+Jun 16 17:05:04 [info] CREATE TABLE `funds` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:04 [info] CREATE TABLE `gramWeights` (
+`foodCode` int(11),
+`subCode` int(11),
+`measureCode` int(11),
+`gramWeight` int(11)) ;
+Jun 16 17:05:05 [info] CREATE TABLE `HEIScores` (
+`component` varchar(255),
+`score` varchar(255),
+`standard` int(11)) ;
+Jun 16 17:05:05 [info] CREATE TABLE `involvement` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:05 [info] CREATE TABLE `mainfooddesc` (
+`foodCode` int(11),
+`mainFoodDesc` varchar(255),
+`abbrDesc` varchar(255)) ;
+Jun 16 17:05:05 [info] CREATE TABLE `measureDescriptions` (
+`measureCode` int(11),
+`description` varchar(255)) ;
+Jun 16 17:05:05 [info] CREATE TABLE `measurementUnit` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:05 [info] CREATE TABLE `moistnfatadjust` (
+`foodCode` int(11),
+`moistureChange` int(11),
+`fatChange` int(11),
+`typeOfFat` int(11)) ;
+Jun 16 17:05:05 [info] CREATE TABLE `nutdesc` (
+`nutrientCode` smallint,
+`nutrientDesc` varchar(255),
+`tagName` varchar(255),
+`unit` varchar(255),
+`decimals` smallint) ;
+Jun 16 17:05:05 [info] CREATE TABLE `nutrientDescription` (
+`nutrientCode` int(11),
+`nutrientDescription` varchar(255),
+`unitOfMeasure` varchar(255)) ;
+Jun 16 17:05:05 [info] CREATE TABLE `nutrientRecommendedValue` (
+`peopleCode` int(11),
+`nutrientCode` int(11),
+`nutrientRecommendedValue` int(11)) ;
+Jun 16 17:05:06 [info] CREATE TABLE `nutrientValues` (
+`foodCode` int(11),
+`nutrientCode` int(11),
+`nutrientValue` float) ;
+Jun 16 17:05:06 [info] CREATE TABLE `otherDefinition` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`definition` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:06 [info] CREATE TABLE `participants` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:06 [info] CREATE TABLE `Permissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:06 [info] CREATE TABLE `person` (
+`peopleCode` int(11),
+`age` varchar(255),
+`sex` varchar(255)) ;
+Jun 16 17:05:06 [info] CREATE TABLE `programImpacts` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`paraprofessional` tinyint(1),
+`professional` tinyint(1),
+`volunteer` tinyint(1),
+`coordinator` tinyint(1),
+`partner` tinyint(1),
+`adultParticipant` tinyint(1),
+`pregnantTeen` tinyint(1),
+`youthParticipant` tinyint(1),
+`otherPeople` tinyint(1),
+`otherPeopleDesc` varchar(255),
+`afterSchool` tinyint(1),
+`military` tinyint(1),
+`pregnancy` tinyint(1),
+`weightLoss` tinyint(1),
+`otherKey` tinyint(1),
+`otherKeyDesc` varchar(255),
+`background` text,
+`outcomesOrImpacts` text,
+`focusID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:06 [info] CREATE TABLE `programPriorities` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`description` text,
+`measurement` text,
+`measurementUnitID` int(11),
+`measurementUnitOther` varchar(255),
+`target2` varchar(255),
+`target3` varchar(255),
+`target4` varchar(255),
+`target5` varchar(255),
+`actual1` varchar(255),
+`actual2` varchar(255),
+`actual3` varchar(255),
+`actual4` varchar(255),
+`actual5` varchar(255),
+`comments` text,
+`focusID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:06 [info] CREATE TABLE `publicAssistance` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`active` tinyint(1),
+`foodAssistance` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`creator_id` int(11),
+`status` tinyint(1),
+`description` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:06 [info] CREATE TABLE `pyramidDesc` (
+`pyramidID` int(11),
+`pyramidName` varchar(255),
+`groupID` int(11),
+`pyramidDescription` varchar(255)) ;
+Jun 16 17:05:07 [info] CREATE TABLE `pyramidLinks` (
+`foodCode` int(11),
+`value` varchar(255),
+`pyramidID` int(11)) ;
+Jun 16 17:05:07 [info] CREATE TABLE `pyramidStandards` (
+`calorieLevel` int(11),
+`fruits` varchar(255),
+`vegetables` varchar(255),
+`grains` varchar(255),
+`milk` varchar(255),
+`meatAndBeans` varchar(255),
+`oils` varchar(255),
+`DC` varchar(255)) ;
+Jun 16 17:05:07 [info] CREATE TABLE `querServing` (
+`foodCode` int(11),
+`varCode` int(11),
+`servings` float,
+`servings23` float) ;
+Jun 16 17:05:07 [info] CREATE TABLE `QuestionAnswers` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`question_id` int(11),
+`answer` varchar(255),
+`answer_type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:07 [info] CREATE TABLE `Questions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`question` varchar(255),
+`questiontype_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:07 [info] CREATE TABLE `QuestionSetQuestions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`question_set_id` int(11),
+`question_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`question_level` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:07 [info] CREATE TABLE `QuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`created_by_user_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:07 [info] CREATE TABLE `QuestionTypes` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:07 [info] CREATE TABLE `recommendedServings` (
+`age` varchar(255),
+`gender` varchar(255),
+`energy` int(11),
+`grains` float,
+`vegetables` float,
+`fruits` float,
+`milk` float,
+`meat` float,
+`thiamin` float,
+`riboflavin` float,
+`niacin` float,
+`vitamin_b6` float,
+`vitamin_b1` float,
+`vitamin_e` float,
+`phosphorus` int(11)) ;
+Jun 16 17:05:08 [info] CREATE TABLE `RegionCounties` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`region_id` int(11),
+`state_county_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:08 [info] CREATE TABLE `Regions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:08 [info] CREATE TABLE `RegUserPermissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`reg_user_id` int(11),
+`permission_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:08 [info] CREATE TABLE `relationshipAgencies` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`description` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:08 [info] CREATE TABLE `relationshipTypes` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`description` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:08 [info] CREATE TABLE `Roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:08 [info] CREATE TABLE `skips` (
+`skipWord` varchar(255)) ;
+Jun 16 17:05:08 [info] CREATE TABLE `Staff` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+`ppid` int(11),
+`name` varchar(255),
+`address1` varchar(255),
+`address2` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` varchar(255),
+`phone` varchar(255),
+`phoneExt` varchar(255),
+`sex` varchar(255),
+`hispanicCode` int(11),
+`raceCodeBinary` int(11),
+`age` varchar(255),
+`alumni` tinyint(1),
+`instructs` tinyint(1),
+`advises` tinyint(1),
+`edRole` tinyint(1),
+`supports` tinyint(1),
+`midManager` tinyint(1),
+`EFNEPHours` int(11),
+`FSNEPHours` int(11),
+`projectXHours` int(11),
+`otherHours` int(11),
+`EFNEPYouthHours` int(11),
+`FSNEPYouthHours` int(11),
+`projectXYouthHours` int(11),
+`otherYouthHours` int(11),
+`lastMod` varchar(255),
+`creator_user_id` int(11),
+`status` tinyint(1),
+`ageCode` varchar(255),
+ PRIMARY KEY (`uid`)) ;
+Jun 16 17:05:08 [info] CREATE TABLE `StaffRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`staff_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:08 [info] CREATE TABLE `subcodedesc` (
+`Subcode` int(11)) ;
+Jun 16 17:05:09 [info] CREATE TABLE `subGroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`description` text,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`creator_id` int(11),
+`status` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:09 [info] CREATE TABLE `tbladult` (
+`AdultKey` int(11),
+`AdultID` int(11),
+`StaffID` varchar(255),
+`SortName` varchar(255),
+`Address1` varchar(255),
+`Address2` varchar(255),
+`City` varchar(255),
+`State` varchar(255),
+`ZIP` varchar(255),
+`Phone` varchar(255),
+`PhoneExt` varchar(255),
+`Sex` varchar(255),
+`isPregnant` blob,
+`isNursing` blob,
+`Age` smallint,
+`Income` varchar(255),
+`HispanicCode` tinyint(1),
+`RaceCodeBinary` int(11),
+`SubRace` int(11),
+`TownSize` smallint,
+`ChildrenAges` varchar(255),
+`nChildren` tinyint(1),
+`nOtherFamily` tinyint(1),
+`nFamilyTotal` smallint,
+`EntryDate` datetime,
+`LessonType` smallint,
+`LessonCount` smallint,
+`ContactCount` smallint,
+`HiGrade` smallint,
+`ProgramStatus` smallint,
+`ExitDate` datetime,
+`EFNEPhelp` tinyint(1),
+`RecallEntry` datetime,
+`RecallExit` datetime,
+`nRecalls` smallint,
+`idRecallEntry` int(11),
+`idRecallExit` int(11),
+`hasE4Recalls` tinyint(1),
+`CKlistEntry` datetime,
+`CKListExit` datetime,
+`nCkLists` smallint,
+`idCKListEntry` int(11),
+`idCKListExit` int(11),
+`setID` varchar(255),
+`havePrenatal` tinyint(1),
+`haveBF` tinyint(1),
+`Remarks` varchar(255),
+`isSelected` tinyint(1),
+`AddressStatus` tinyint(1),
+`DateAddressVerified` datetime,
+`CountyName` varchar(255),
+`CountyFIPS` varchar(255),
+`CongressionalDistrict` varchar(255),
+`MSA` varchar(255),
+`Latitude` int(11),
+`Longitude` int(11),
+`LastMod` datetime,
+`first_name` varchar(255),
+`last_name` int(11),
+`status` tinyint(1),
+`hours` int(11)) ;
+Jun 16 17:05:09 [info] CREATE TABLE `tblAdultDefault` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` varchar(255),
+`residenceSize` int(11),
+`lessonType` int(11),
+`creator_id` int(11),
+`status` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:09 [info] CREATE TABLE `tblAdultDefaultSubgroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_default_id` int(11),
+`subgroup_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`subgroup_type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:09 [info] CREATE TABLE `tblAdultPublicAssistanceEntry` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`public_assistance_id` int(11),
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:09 [info] CREATE TABLE `tblAdultPublicAssistanceExit` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`public_assistance_id` int(11),
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:09 [info] CREATE TABLE `tblAdultSubGroups` (
+`subGroupId` int(11),
+`adultID` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`subgroupType` varchar(255)) ;
+Jun 16 17:05:09 [info] CREATE TABLE `tblrecall` (
+`RecallKey` int(11),
+`AdultKey` int(11),
+`RecallDate` varchar(255),
+`NutritionMethod` varchar(255),
+`RecallSource` tinyint(1),
+`isPregnant` tinyint(1),
+`isNursing` tinyint(1),
+`takesSupplements` tinyint(1),
+`FoodCost` int(11),
+`ActivityLevel` tinyint(1),
+`isExit` tinyint(1),
+`nMeals` smallint,
+`Fruits` int(11),
+`Vegetables` int(11),
+`Grains` int(11),
+`Meats` int(11),
+`Milk` int(11),
+`D_MILK` int(11),
+`F_TOT` int(11),
+`G_TOT` int(11),
+`G_WHL` int(11),
+`MEATBEANS` int(11),
+`HEIOILS` int(11),
+`SATFAT` int(11),
+`SODIUM` int(11),
+`SoFAAS` int(11),
+`T_VEG` int(11),
+`V_DGOL` int(11),
+`WHOLEFRT` int(11),
+`HEI_TOTAL` int(11),
+`FreezeCode` smallint,
+`doFreeze` tinyint(1),
+`LastMod` varchar(255)) ;
+Jun 16 17:05:09 [info] CREATE TABLE `tblrecallfooditems` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`recallKey` int(11),
+`itemSeq` smallint,
+`mealType` tinyint(1),
+`foodCode` int(11),
+`Qty` int(11),
+`portionCode` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:09 [info] CREATE TABLE `terms` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`term` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:10 [info] CREATE TABLE `userAdultDefaults` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`adultDefaultId` int(11),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:10 [info] CREATE TABLE `userAdults` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`adult_id` int(11),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:10 [info] CREATE TABLE `userFilters` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`filter_id` int(11),
+`filter_type` varchar(255),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:10 [info] CREATE TABLE `UserParents` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`user_parent_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:10 [info] CREATE TABLE `UserPermissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`permission_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:10 [info] CREATE TABLE `userPublicAssistance` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`public_assistance_id` int(11),
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`can_view` int(11),
+`can_edit` int(11),
+`can_delete` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:10 [info] CREATE TABLE `UserQuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`question_set_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:10 [info] CREATE TABLE `UserRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:10 [info] CREATE TABLE `UserRoles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`role_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:11 [info] CREATE TABLE `userStaff` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`staff_id` int(11),
+`can_view` tinyint(1),
+`can_edit` int(11),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:11 [info] CREATE TABLE `userSubgroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`subgroup_id` int(11),
+`user_id` int(11),
+`type` varchar(255),
+`can_view` int(11),
+`can_edit` int(11),
+`can_delete` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:11 [info] CREATE TABLE `userYouthGroupDefaults` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`youth_group_default_id` int(11),
+`can_view` int(11),
+`can_edit` int(11),
+`can_delete` int(11),
+`date_create` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:11 [info] CREATE TABLE `userYouthgroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`youth_group_id` int(11),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:11 [info] CREATE TABLE `YouthGroup` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`groupID` int(11),
+`name` varchar(255),
+`delivery` varchar(255),
+`program` varchar(255),
+`leaderID` int(11),
+`isGroup` varchar(255),
+`groupMailingName` varchar(255),
+`address1` varchar(255),
+`address2` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` int(11),
+`phone` int(11),
+`phoneExt` varchar(255),
+`numberOfMeetings` int(11),
+`numberOfLessons` int(11),
+`contactHours` int(11),
+`numberOfYouthInOther4H` int(11),
+`start` varchar(255),
+`end` varchar(255),
+`groupTotal` int(11),
+`numberMales` int(11),
+`numberFemales` int(11),
+`remarks` text,
+`addressStatus` int(11),
+`dateAddressVerified` varchar(255),
+`countyName` varchar(255),
+`countyFips` int(11),
+`congressionalID` int(11),
+`MSA` int(11),
+`latitude` varchar(255),
+`longitude` varchar(255),
+`useInd1` varchar(255),
+`useInd2` varchar(255),
+`useInd3` varchar(255),
+`useInd4` varchar(255),
+`eatVariety` varchar(255),
+`knowledge` varchar(255),
+`selectFood` varchar(255),
+`practices` varchar(255),
+`lastMod` varchar(255),
+ PRIMARY KEY (`uid`)) ;
+Jun 16 17:05:11 [info] CREATE TABLE `youthGroupDefault` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` varchar(255),
+`status` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:11 [info] CREATE TABLE `YouthGroupItems` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`youthGroupUID` int(11),
+`dataType` varchar(255),
+`dataItem` int(11),
+`dataValue` int(11),
+ PRIMARY KEY (`uid`)) ;
+Jun 16 17:05:11 [info] CREATE TABLE `YouthGroupQuestionSetAnswers` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:11 [info] CREATE TABLE `YouthGroupQuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`youthgroup_id` int(11),
+`question_set_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`question_set_level` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:12 [info] CREATE TABLE `YouthGroupRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`youth_group_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:12 [info] CREATE TABLE `YouthGroupStaff` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`groupUID` int(11),
+`rank` int(11),
+`staffUID` int(11),
+ PRIMARY KEY (`uid`)) ;
+Jun 16 17:05:12 [info] CREATE TABLE `YouthGroupSubRaces` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`youth_group_id` int(11),
+`sub_race_id` int(11),
+`sub_race_count` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:12 [info] INSERT INTO schema_migrations (version) VALUES ('20110610200530')
+Jun 16 17:05:12 [info] LOCK TABLES `focusType` WRITE;
+Jun 16 17:05:12 [info] INSERT INTO `focusType` (`id`,`focusDescription`,`typeID`)
+		VALUES
+			(1,'Diet Quality/Physical Activity',1),
+			(2,'Food Resource Management',1),
+			(3,'Food Safety',1),
+			(4,'Food Security',1),
+			(5,'Family/Interpersonal Relationships',0),
+			(6,'Institution, Organization, Community',0),
+			(7,'Social Structure, Policy, Practice',0),
+			(8,'Management/Leadership',0),
+			(9,'Other (describe)',1);
+Jun 16 17:05:12 [info] UNLOCK TABLES;
+Jun 16 17:05:12 [info] INSERT INTO schema_migrations (version) VALUES ('20110610201228')
+Jun 16 17:05:12 [info] CREATE TABLE `RegionPublicAssistance` (
+`region_id` int(11),
+`public_assistance_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:12 [info] INSERT INTO schema_migrations (version) VALUES ('20110613203312')
+Jun 16 17:05:12 [info] CREATE TABLE `RegionSubgroups` (
+`region_id` int(11),
+`subgroup_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:12 [info] INSERT INTO schema_migrations (version) VALUES ('20110613204937')
+Jun 16 17:05:12 [info] CREATE TABLE `RegionAdultDefaults` (
+`region_id` int(11),
+`adult_defuault_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:05:12 [info] INSERT INTO schema_migrations (version) VALUES ('20110613205448')
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `addfooddesc`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `CNPPFruits`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `equiv0304`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `fdbPyramid`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `fnddsnutval`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `FNDDSRecCount`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `fnddssrlinks`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `foodCalorieLevels`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `foodIntakePatterns`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `foodportiondesc`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `foodsubcodelinks`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `foodweights`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `gramWeights`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `involvement`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `mainfooddesc`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `measureDescriptions`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `measurementUnit`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `moistnfatadjust`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `nutdesc`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `nutrientDescription`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `nutrientRecommendedValue`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `nutrientValues`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `otherDefinition`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `participants`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `person`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `pyramidDesc`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `PyramidLinks`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `PyramidStandards`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `querServing`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `recommendedServings`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `relationshipAgencies`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `relationshipTypes`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `skips`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `subcodedesc`
+Jun 16 17:05:12 [info] DROP TABLE IF EXISTS `terms`
+Jun 16 17:05:12 [info] INSERT INTO schema_migrations (version) VALUES ('20110614154819')
+Jun 16 17:05:12 [info] ALTER TABLE tblrecall ADD `SoFAS` decimal(10, 5)
+Jun 16 17:05:12 [info] ALTER TABLE tblrecall ADD `refined_grains` decimal(10, 5)
+Jun 16 17:05:13 [info] ALTER TABLE tblrecall ADD `sat_fat` decimal(10, 5)
+Jun 16 17:05:13 [info] ALTER TABLE tblrecall ADD `seafood` decimal(10, 5)
+Jun 16 17:05:13 [info] ALTER TABLE tblrecall ADD `oils` decimal(10, 5)
+Jun 16 17:05:13 [info] ALTER TABLE tblrecall ADD `folate` decimal(10, 5)
+Jun 16 17:05:13 [info] ALTER TABLE tblrecall ADD `iron` decimal(10, 5)
+Jun 16 17:05:13 [info] ALTER TABLE tblrecall ADD `food_energy` decimal(10, 5)
+Jun 16 17:05:13 [info] ALTER TABLE tblrecall ADD `fiber` decimal(10, 5)
+Jun 16 17:05:13 [info] ALTER TABLE tblrecall ADD `potassium` decimal(10, 5)
+Jun 16 17:05:13 [info] ALTER TABLE tblrecall ADD `calcium` decimal(10, 5)
+Jun 16 17:05:14 [info] ALTER TABLE tblrecall ADD `total_sodium` decimal(10, 5)
+Jun 16 17:05:14 [info] ALTER TABLE tblrecall ADD `total_protein` decimal(10, 5)
+Jun 16 17:05:14 [info] INSERT INTO schema_migrations (version) VALUES ('20110614180452')
+Jun 16 17:05:14 [info] SHOW COLUMNS FROM `RegionAdultDefaults` LIKE 'adult_defuault_id'
+Jun 16 17:05:14 [info] ALTER TABLE `RegionAdultDefaults` CHANGE `adult_defuault_id` `adult_default_id` int(11)
+Jun 16 17:05:14 [info] INSERT INTO schema_migrations (version) VALUES ('20110616201742')
+Jun 16 17:05:14 [info] DROP TABLE IF EXISTS `UserPermissions`
+Jun 16 17:05:14 [info] DROP TABLE IF EXISTS `UserParents`
+Jun 16 17:05:14 [info] INSERT INTO schema_migrations (version) VALUES ('20110616202800')
+Jun 16 17:34:10 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255)) ;
+Jun 16 17:34:10 [info] CREATE UNIQUE INDEX idx_schema_migrations_version ON `schema_migrations`(`version`)
+Jun 16 17:34:10 [info] SELECT version FROM schema_migrations
+Jun 16 17:34:10 [info] SELECT version FROM schema_migrations
+Jun 16 17:34:10 [info] SELECT version FROM schema_migrations
+Jun 16 17:34:10 [info] CREATE TABLE `addfooddesc` (
+`foodCode` int(11),
+`seqNum` smallint,
+`additionalDescription` varchar(255),
+`lastMod` timestamp DEFAULT CURRENT_TIMESTAMP) ;
+Jun 16 17:34:10 [info] CREATE TABLE `AdultQuestionSetAnswers` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_question_sets_id` int(11),
+`question_answers_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:10 [info] CREATE TABLE `AdultQuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`question_set_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`question_set_level` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:10 [info] CREATE TABLE `AdultRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:10 [info] CREATE TABLE `annualUpdate` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`firstName` varchar(255),
+`middleName` varchar(255),
+`lastName` varchar(255),
+`phoneNumber` varchar(255),
+`faxNumber` varchar(255),
+`emailAddress` varchar(255),
+`website` varchar(255),
+`situation` text,
+`situationDescription` text,
+`situationTargetAudience` text,
+`curricula` text,
+`IOCTitle` varchar(255),
+`SSPPTitle` varchar(255),
+`SSPPDescription` text,
+`IOCDescription` text,
+`stateID` int(11),
+`focusID` int(11),
+`SSPPFocusID` int(11),
+`IOCFocusID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:10 [info] CREATE TABLE `annualUpdateCounties` (
+`annualUpdateID` int(11),
+`countyID` int(11)) ;
+Jun 16 17:34:11 [info] CREATE TABLE `annualUpdateFunds` (
+`annualUpdateID` int(11),
+`fundID` int(11),
+`val` varchar(255),
+`source` varchar(255)) ;
+Jun 16 17:34:11 [info] CREATE TABLE `annualUpdateImpacts` (
+`annualUpdateID` int(11),
+`impactID` int(11)) ;
+Jun 16 17:34:11 [info] CREATE TABLE `annualUpdateInvolvement` (
+`annualUpdateID` int(11),
+`involvementID` int(11),
+`amount` int(11)) ;
+Jun 16 17:34:11 [info] CREATE TABLE `annualUpdateParticipation` (
+`annualUpdateID` int(11),
+`participantID` int(11),
+`numberOfLocations` int(11),
+`numberOfPartnerships` int(11)) ;
+Jun 16 17:34:11 [info] CREATE TABLE `annualUpdatePriorities` (
+`annualUpdateID` int(11),
+`prioritiesID` int(11)) ;
+Jun 16 17:34:11 [info] CREATE TABLE `annualUpdateRelationship` (
+`annualUpdateID` int(11),
+`relationshipAgencyID` int(11),
+`relationshipTypeID` int(11)) ;
+Jun 16 17:34:11 [info] CREATE TABLE `CNPPFruits` (
+`foodCode` int(11),
+`FRTJUICE` varchar(255),
+`WHOLEFRT` int(11)) ;
+Jun 16 17:34:11 [info] CREATE TABLE `equiv0304` (
+`foodCode` int(11),
+`equivFlag` int(11),
+`modCode` int(11),
+`G_TOT` varchar(255),
+`G_WHL` varchar(255),
+`G_NWHL` varchar(255),
+`V_TOT` varchar(255),
+`V_DRKGR` varchar(255),
+`V_ORANGE` varchar(255),
+`V_POTATO` varchar(255),
+`V_STARCY` varchar(255),
+`V_TOMATO` varchar(255),
+`V_OTHER` varchar(255),
+`F_TOT` varchar(255),
+`F_CITMLB` varchar(255),
+`F_OTHER` varchar(255),
+`D_TOT` varchar(255),
+`D_MILK` varchar(255),
+`D_YOGURT` varchar(255),
+`D_CHEESE` varchar(255),
+`M_MPF` varchar(255),
+`M_MEAT` varchar(255),
+`M_ORGAN` varchar(255),
+`M_FRANK` varchar(255),
+`M_POULT` varchar(255),
+`M_FISH_HI` varchar(255),
+`M_FISH_LO` varchar(255),
+`M_EGG` varchar(255),
+`M_SOY` varchar(255),
+`M_NUTSD` varchar(255),
+`LEGUMES` varchar(255),
+`DISCFAT_OIL` varchar(255),
+`DISCFAT_SOL` varchar(255),
+`ADD_SUG` varchar(255),
+`A_BEV` varchar(255)) ;
+Jun 16 17:34:12 [info] CREATE TABLE `fdbPyramid` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`pyramidName` varchar(255),
+`groupID` int(11),
+`pyramidDescription` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:12 [info] CREATE TABLE `filter` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`title` varchar(255),
+`type` varchar(255),
+`income_not_specified` int(11),
+`race_and_or` varchar(255),
+`demoQuery` text,
+`subgroupQuery` text,
+`paQuery` text,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:12 [info] CREATE TABLE `filterAddressVerification` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`verified` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:12 [info] CREATE TABLE `filterAge` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_age` int(11),
+`low_age` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:12 [info] CREATE TABLE `filterBreastfeeding` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`breastfeeding` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:12 [info] CREATE TABLE `filterChildAges` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_age` int(11),
+`low_age` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:12 [info] CREATE TABLE `filterChildren` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`low_children` int(11),
+`high_children` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:12 [info] CREATE TABLE `filterContacts` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_contacts` int(11),
+`low_contacts` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:12 [info] CREATE TABLE `filterEntry` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`start_date` varchar(255),
+`end_date` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:12 [info] CREATE TABLE `filterEthnicity` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`ethnic_code` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:13 [info] CREATE TABLE `filterExit` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`start_date` varchar(255),
+`end_date` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:13 [info] CREATE TABLE `filterGrade` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`grade_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:13 [info] CREATE TABLE `filterIncome` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_income` int(11),
+`low_income` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:13 [info] CREATE TABLE `filterLesson` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`lesson_type` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:13 [info] CREATE TABLE `filterLessons` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`high_lessons` int(11),
+`low_lessons` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:13 [info] CREATE TABLE `filterMonthsInProgram` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`low_months` int(11),
+`high_months` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:13 [info] CREATE TABLE `filterPoverty` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`low_percent` float,
+`high_percent` float,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:13 [info] CREATE TABLE `filterPregnancy` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`pregnancy` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:13 [info] CREATE TABLE `filterProgramStatus` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`program_status` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:14 [info] CREATE TABLE `filterPublicAssistance` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`public_assistance_id` int(11),
+`public_assistance_type` varchar(255),
+`public_assistance_value` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:14 [info] CREATE TABLE `filterRace` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`race_code` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:14 [info] CREATE TABLE `filterResidence` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`residence_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:14 [info] CREATE TABLE `filterSex` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`sex` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:14 [info] CREATE TABLE `filterSubGroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`subgroup_id` int(11),
+`subgroup_type` varchar(255),
+`subgroup_value` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:14 [info] CREATE TABLE `filterSubRace` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`filter_id` int(11),
+`sub_race_id` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:14 [info] CREATE TABLE `fnddsnutval` (
+`foodCode` int(11),
+`nutrientCode` smallint,
+`nutrientValue` int(11)) ;
+Jun 16 17:34:14 [info] CREATE TABLE `FNDDSRecCount` (
+`fullFileName` varchar(255),
+`no_of_records` int(11)) ;
+Jun 16 17:34:14 [info] CREATE TABLE `fnddssrlinks` (
+`foodCode` int(11),
+`seqNum` smallint,
+`SRCode` int(11),
+`SRDescription` varchar(255),
+`amount` int(11),
+`measure` varchar(255),
+`portionCode` int(11),
+`retentionCode` smallint,
+`flag` smallint,
+`weight` int(11),
+`changeTypeToSRCode` varchar(255),
+`changeTypeToWeight` varchar(255),
+`changeTypeToRetnCode` varchar(255)) ;
+Jun 16 17:34:15 [info] CREATE TABLE `focus` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`locationID` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:15 [info] CREATE TABLE `focusItems` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`focusID` int(11),
+`typeID` int(11),
+`otherID` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:15 [info] CREATE TABLE `focusLocation` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`description` varchar(255),
+`typeID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:15 [info] CREATE TABLE `focusOutcomes` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`termType` int(11),
+`focusItemID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:15 [info] CREATE TABLE `focusType` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`focusDescription` varchar(255),
+`typeID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:15 [info] CREATE TABLE `foodCalorieLevels` (
+`ageLo` int(11),
+`ageHi` smallint,
+`M1` smallint,
+`M2` smallint,
+`M3` smallint,
+`F1` smallint,
+`F2` smallint,
+`F3` smallint) ;
+Jun 16 17:34:15 [info] CREATE TABLE `foodIntakePatterns` (
+`calorieLevel` int(11),
+`fruits` float,
+`vegetables` float,
+`grains` float,
+`meatBeans` float,
+`milk` float,
+`oils` float,
+`DCA` smallint) ;
+Jun 16 17:34:15 [info] CREATE TABLE `foodportiondesc` (
+`portionCode` int(11),
+`portionDescription` varchar(255),
+`changeType` varchar(255)) ;
+Jun 16 17:34:15 [info] CREATE TABLE `foodsubcodelinks` (
+`foodCode` int(11),
+`subCode` int(11)) ;
+Jun 16 17:34:15 [info] CREATE TABLE `foodweights` (
+`foodCode` int(11),
+`subCode` int(11),
+`seqNum` smallint,
+`portionCode` int(11),
+`portionWeight` int(11),
+`changeType` varchar(255)) ;
+Jun 16 17:34:16 [info] CREATE TABLE `funds` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:16 [info] CREATE TABLE `gramWeights` (
+`foodCode` int(11),
+`subCode` int(11),
+`measureCode` int(11),
+`gramWeight` int(11)) ;
+Jun 16 17:34:16 [info] CREATE TABLE `HEIScores` (
+`component` varchar(255),
+`score` varchar(255),
+`standard` int(11)) ;
+Jun 16 17:34:16 [info] CREATE TABLE `involvement` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:16 [info] CREATE TABLE `mainfooddesc` (
+`foodCode` int(11),
+`mainFoodDesc` varchar(255),
+`abbrDesc` varchar(255)) ;
+Jun 16 17:34:16 [info] CREATE TABLE `measureDescriptions` (
+`measureCode` int(11),
+`description` varchar(255)) ;
+Jun 16 17:34:16 [info] CREATE TABLE `measurementUnit` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:16 [info] CREATE TABLE `moistnfatadjust` (
+`foodCode` int(11),
+`moistureChange` int(11),
+`fatChange` int(11),
+`typeOfFat` int(11)) ;
+Jun 16 17:34:17 [info] CREATE TABLE `nutdesc` (
+`nutrientCode` smallint,
+`nutrientDesc` varchar(255),
+`tagName` varchar(255),
+`unit` varchar(255),
+`decimals` smallint) ;
+Jun 16 17:34:17 [info] CREATE TABLE `nutrientDescription` (
+`nutrientCode` int(11),
+`nutrientDescription` varchar(255),
+`unitOfMeasure` varchar(255)) ;
+Jun 16 17:34:17 [info] CREATE TABLE `nutrientRecommendedValue` (
+`peopleCode` int(11),
+`nutrientCode` int(11),
+`nutrientRecommendedValue` int(11)) ;
+Jun 16 17:34:17 [info] CREATE TABLE `nutrientValues` (
+`foodCode` int(11),
+`nutrientCode` int(11),
+`nutrientValue` float) ;
+Jun 16 17:34:17 [info] CREATE TABLE `otherDefinition` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`definition` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:17 [info] CREATE TABLE `participants` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:17 [info] CREATE TABLE `Permissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:17 [info] CREATE TABLE `person` (
+`peopleCode` int(11),
+`age` varchar(255),
+`sex` varchar(255)) ;
+Jun 16 17:34:17 [info] CREATE TABLE `programImpacts` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`paraprofessional` tinyint(1),
+`professional` tinyint(1),
+`volunteer` tinyint(1),
+`coordinator` tinyint(1),
+`partner` tinyint(1),
+`adultParticipant` tinyint(1),
+`pregnantTeen` tinyint(1),
+`youthParticipant` tinyint(1),
+`otherPeople` tinyint(1),
+`otherPeopleDesc` varchar(255),
+`afterSchool` tinyint(1),
+`military` tinyint(1),
+`pregnancy` tinyint(1),
+`weightLoss` tinyint(1),
+`otherKey` tinyint(1),
+`otherKeyDesc` varchar(255),
+`background` text,
+`outcomesOrImpacts` text,
+`focusID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:18 [info] CREATE TABLE `programPriorities` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`description` text,
+`measurement` text,
+`measurementUnitID` int(11),
+`measurementUnitOther` varchar(255),
+`target2` varchar(255),
+`target3` varchar(255),
+`target4` varchar(255),
+`target5` varchar(255),
+`actual1` varchar(255),
+`actual2` varchar(255),
+`actual3` varchar(255),
+`actual4` varchar(255),
+`actual5` varchar(255),
+`comments` text,
+`focusID` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:18 [info] CREATE TABLE `publicAssistance` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`active` tinyint(1),
+`foodAssistance` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`creator_id` int(11),
+`status` tinyint(1),
+`description` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:18 [info] CREATE TABLE `pyramidDesc` (
+`pyramidID` int(11),
+`pyramidName` varchar(255),
+`groupID` int(11),
+`pyramidDescription` varchar(255)) ;
+Jun 16 17:34:18 [info] CREATE TABLE `pyramidLinks` (
+`foodCode` int(11),
+`value` varchar(255),
+`pyramidID` int(11)) ;
+Jun 16 17:34:18 [info] CREATE TABLE `pyramidStandards` (
+`calorieLevel` int(11),
+`fruits` varchar(255),
+`vegetables` varchar(255),
+`grains` varchar(255),
+`milk` varchar(255),
+`meatAndBeans` varchar(255),
+`oils` varchar(255),
+`DC` varchar(255)) ;
+Jun 16 17:34:18 [info] CREATE TABLE `querServing` (
+`foodCode` int(11),
+`varCode` int(11),
+`servings` float,
+`servings23` float) ;
+Jun 16 17:34:18 [info] CREATE TABLE `QuestionAnswers` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`question_id` int(11),
+`answer` varchar(255),
+`answer_type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:18 [info] CREATE TABLE `Questions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`question` varchar(255),
+`questiontype_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:18 [info] CREATE TABLE `QuestionSetQuestions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`question_set_id` int(11),
+`question_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`question_level` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:19 [info] CREATE TABLE `QuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`created_by_user_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:19 [info] CREATE TABLE `QuestionTypes` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:19 [info] CREATE TABLE `recommendedServings` (
+`age` varchar(255),
+`gender` varchar(255),
+`energy` int(11),
+`grains` float,
+`vegetables` float,
+`fruits` float,
+`milk` float,
+`meat` float,
+`thiamin` float,
+`riboflavin` float,
+`niacin` float,
+`vitamin_b6` float,
+`vitamin_b1` float,
+`vitamin_e` float,
+`phosphorus` int(11)) ;
+Jun 16 17:34:19 [info] CREATE TABLE `RegionCounties` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`region_id` int(11),
+`state_county_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:19 [info] CREATE TABLE `Regions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:19 [info] CREATE TABLE `RegUserPermissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`reg_user_id` int(11),
+`permission_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:19 [info] CREATE TABLE `relationshipAgencies` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`description` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:19 [info] CREATE TABLE `relationshipTypes` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`description` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:20 [info] CREATE TABLE `Roles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`title` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:20 [info] CREATE TABLE `skips` (
+`skipWord` varchar(255)) ;
+Jun 16 17:34:20 [info] CREATE TABLE `Staff` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`type` varchar(255),
+`ppid` int(11),
+`name` varchar(255),
+`address1` varchar(255),
+`address2` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` varchar(255),
+`phone` varchar(255),
+`phoneExt` varchar(255),
+`sex` varchar(255),
+`hispanicCode` int(11),
+`raceCodeBinary` int(11),
+`age` varchar(255),
+`alumni` tinyint(1),
+`instructs` tinyint(1),
+`advises` tinyint(1),
+`edRole` tinyint(1),
+`supports` tinyint(1),
+`midManager` tinyint(1),
+`EFNEPHours` int(11),
+`FSNEPHours` int(11),
+`projectXHours` int(11),
+`otherHours` int(11),
+`EFNEPYouthHours` int(11),
+`FSNEPYouthHours` int(11),
+`projectXYouthHours` int(11),
+`otherYouthHours` int(11),
+`lastMod` varchar(255),
+`creator_user_id` int(11),
+`status` tinyint(1),
+`ageCode` varchar(255),
+ PRIMARY KEY (`uid`)) ;
+Jun 16 17:34:20 [info] CREATE TABLE `StaffRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`staff_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:20 [info] CREATE TABLE `subcodedesc` (
+`Subcode` int(11)) ;
+Jun 16 17:34:20 [info] CREATE TABLE `subGroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`description` text,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`creator_id` int(11),
+`status` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:20 [info] CREATE TABLE `tbladult` (
+`AdultKey` int(11),
+`AdultID` int(11),
+`StaffID` varchar(255),
+`SortName` varchar(255),
+`Address1` varchar(255),
+`Address2` varchar(255),
+`City` varchar(255),
+`State` varchar(255),
+`ZIP` varchar(255),
+`Phone` varchar(255),
+`PhoneExt` varchar(255),
+`Sex` varchar(255),
+`isPregnant` blob,
+`isNursing` blob,
+`Age` smallint,
+`Income` varchar(255),
+`HispanicCode` tinyint(1),
+`RaceCodeBinary` int(11),
+`SubRace` int(11),
+`TownSize` smallint,
+`ChildrenAges` varchar(255),
+`nChildren` tinyint(1),
+`nOtherFamily` tinyint(1),
+`nFamilyTotal` smallint,
+`EntryDate` datetime,
+`LessonType` smallint,
+`LessonCount` smallint,
+`ContactCount` smallint,
+`HiGrade` smallint,
+`ProgramStatus` smallint,
+`ExitDate` datetime,
+`EFNEPhelp` tinyint(1),
+`RecallEntry` datetime,
+`RecallExit` datetime,
+`nRecalls` smallint,
+`idRecallEntry` int(11),
+`idRecallExit` int(11),
+`hasE4Recalls` tinyint(1),
+`CKlistEntry` datetime,
+`CKListExit` datetime,
+`nCkLists` smallint,
+`idCKListEntry` int(11),
+`idCKListExit` int(11),
+`setID` varchar(255),
+`havePrenatal` tinyint(1),
+`haveBF` tinyint(1),
+`Remarks` varchar(255),
+`isSelected` tinyint(1),
+`AddressStatus` tinyint(1),
+`DateAddressVerified` datetime,
+`CountyName` varchar(255),
+`CountyFIPS` varchar(255),
+`CongressionalDistrict` varchar(255),
+`MSA` varchar(255),
+`Latitude` int(11),
+`Longitude` int(11),
+`LastMod` datetime,
+`first_name` varchar(255),
+`last_name` int(11),
+`status` tinyint(1),
+`hours` int(11)) ;
+Jun 16 17:34:21 [info] CREATE TABLE `tblAdultDefault` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` varchar(255),
+`residenceSize` int(11),
+`lessonType` int(11),
+`creator_id` int(11),
+`status` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:21 [info] CREATE TABLE `tblAdultDefaultSubgroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_default_id` int(11),
+`subgroup_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`subgroup_type` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:21 [info] CREATE TABLE `tblAdultPublicAssistanceEntry` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`public_assistance_id` int(11),
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:21 [info] CREATE TABLE `tblAdultPublicAssistanceExit` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`adult_id` int(11),
+`public_assistance_id` int(11),
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:21 [info] CREATE TABLE `tblAdultSubGroups` (
+`subGroupId` int(11),
+`adultID` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`subgroupType` varchar(255)) ;
+Jun 16 17:34:21 [info] CREATE TABLE `tblrecall` (
+`RecallKey` int(11),
+`AdultKey` int(11),
+`RecallDate` varchar(255),
+`NutritionMethod` varchar(255),
+`RecallSource` tinyint(1),
+`isPregnant` tinyint(1),
+`isNursing` tinyint(1),
+`takesSupplements` tinyint(1),
+`FoodCost` int(11),
+`ActivityLevel` tinyint(1),
+`isExit` tinyint(1),
+`nMeals` smallint,
+`Fruits` int(11),
+`Vegetables` int(11),
+`Grains` int(11),
+`Meats` int(11),
+`Milk` int(11),
+`D_MILK` int(11),
+`F_TOT` int(11),
+`G_TOT` int(11),
+`G_WHL` int(11),
+`MEATBEANS` int(11),
+`HEIOILS` int(11),
+`SATFAT` int(11),
+`SODIUM` int(11),
+`SoFAAS` int(11),
+`T_VEG` int(11),
+`V_DGOL` int(11),
+`WHOLEFRT` int(11),
+`HEI_TOTAL` int(11),
+`FreezeCode` smallint,
+`doFreeze` tinyint(1),
+`LastMod` varchar(255)) ;
+Jun 16 17:34:21 [info] CREATE TABLE `tblrecallfooditems` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`recallKey` int(11),
+`itemSeq` smallint,
+`mealType` tinyint(1),
+`foodCode` int(11),
+`Qty` int(11),
+`portionCode` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:21 [info] CREATE TABLE `terms` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`term` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:21 [info] CREATE TABLE `userAdultDefaults` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`adultDefaultId` int(11),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:22 [info] CREATE TABLE `userAdults` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`adult_id` int(11),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:22 [info] CREATE TABLE `userFilters` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`filter_id` int(11),
+`filter_type` varchar(255),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:22 [info] CREATE TABLE `UserParents` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`user_parent_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:22 [info] CREATE TABLE `UserPermissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`permission_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:22 [info] CREATE TABLE `userPublicAssistance` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`public_assistance_id` int(11),
+`type` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`can_view` int(11),
+`can_edit` int(11),
+`can_delete` int(11),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:22 [info] CREATE TABLE `UserQuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`question_set_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:22 [info] CREATE TABLE `UserRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:22 [info] CREATE TABLE `UserRoles` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`role_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:22 [info] CREATE TABLE `userStaff` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`staff_id` int(11),
+`can_view` tinyint(1),
+`can_edit` int(11),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:23 [info] CREATE TABLE `userSubgroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`subgroup_id` int(11),
+`user_id` int(11),
+`type` varchar(255),
+`can_view` int(11),
+`can_edit` int(11),
+`can_delete` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:23 [info] CREATE TABLE `userYouthGroupDefaults` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`youth_group_default_id` int(11),
+`can_view` int(11),
+`can_edit` int(11),
+`can_delete` int(11),
+`date_create` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:23 [info] CREATE TABLE `userYouthgroups` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`youth_group_id` int(11),
+`can_view` tinyint(1),
+`can_edit` tinyint(1),
+`can_delete` tinyint(1),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:23 [info] CREATE TABLE `YouthGroup` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`groupID` int(11),
+`name` varchar(255),
+`delivery` varchar(255),
+`program` varchar(255),
+`leaderID` int(11),
+`isGroup` varchar(255),
+`groupMailingName` varchar(255),
+`address1` varchar(255),
+`address2` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` int(11),
+`phone` int(11),
+`phoneExt` varchar(255),
+`numberOfMeetings` int(11),
+`numberOfLessons` int(11),
+`contactHours` int(11),
+`numberOfYouthInOther4H` int(11),
+`start` varchar(255),
+`end` varchar(255),
+`groupTotal` int(11),
+`numberMales` int(11),
+`numberFemales` int(11),
+`remarks` text,
+`addressStatus` int(11),
+`dateAddressVerified` varchar(255),
+`countyName` varchar(255),
+`countyFips` int(11),
+`congressionalID` int(11),
+`MSA` int(11),
+`latitude` varchar(255),
+`longitude` varchar(255),
+`useInd1` varchar(255),
+`useInd2` varchar(255),
+`useInd3` varchar(255),
+`useInd4` varchar(255),
+`eatVariety` varchar(255),
+`knowledge` varchar(255),
+`selectFood` varchar(255),
+`practices` varchar(255),
+`lastMod` varchar(255),
+ PRIMARY KEY (`uid`)) ;
+Jun 16 17:34:23 [info] CREATE TABLE `youthGroupDefault` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`name` varchar(255),
+`city` varchar(255),
+`state` varchar(255),
+`zip` varchar(255),
+`status` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:23 [info] CREATE TABLE `YouthGroupItems` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`youthGroupUID` int(11),
+`dataType` varchar(255),
+`dataItem` int(11),
+`dataValue` int(11),
+ PRIMARY KEY (`uid`)) ;
+Jun 16 17:34:23 [info] CREATE TABLE `YouthGroupQuestionSetAnswers` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:23 [info] CREATE TABLE `YouthGroupQuestionSets` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`youthgroup_id` int(11),
+`question_set_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`question_set_level` tinyint(1),
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:23 [info] CREATE TABLE `YouthGroupRegions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`youth_group_id` int(11),
+`region_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:24 [info] CREATE TABLE `YouthGroupStaff` (
+`uid` int(11) UNSIGNED auto_increment NOT NULL,
+`groupUID` int(11),
+`rank` int(11),
+`staffUID` int(11),
+ PRIMARY KEY (`uid`)) ;
+Jun 16 17:34:24 [info] CREATE TABLE `YouthGroupSubRaces` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`youth_group_id` int(11),
+`sub_race_id` int(11),
+`sub_race_count` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:24 [info] INSERT INTO schema_migrations (version) VALUES ('20110610200530')
+Jun 16 17:34:24 [info] LOCK TABLES `focusType` WRITE;
+Jun 16 17:34:24 [info] INSERT INTO `focusType` (`id`,`focusDescription`,`typeID`)
+		VALUES
+			(1,'Diet Quality/Physical Activity',1),
+			(2,'Food Resource Management',1),
+			(3,'Food Safety',1),
+			(4,'Food Security',1),
+			(5,'Family/Interpersonal Relationships',0),
+			(6,'Institution, Organization, Community',0),
+			(7,'Social Structure, Policy, Practice',0),
+			(8,'Management/Leadership',0),
+			(9,'Other (describe)',1);
+Jun 16 17:34:24 [info] UNLOCK TABLES;
+Jun 16 17:34:24 [info] INSERT INTO schema_migrations (version) VALUES ('20110610201228')
+Jun 16 17:34:24 [info] CREATE TABLE `RegionPublicAssistance` (
+`region_id` int(11),
+`public_assistance_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:24 [info] INSERT INTO schema_migrations (version) VALUES ('20110613203312')
+Jun 16 17:34:24 [info] CREATE TABLE `RegionSubgroups` (
+`region_id` int(11),
+`subgroup_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:24 [info] INSERT INTO schema_migrations (version) VALUES ('20110613204937')
+Jun 16 17:34:24 [info] CREATE TABLE `RegionAdultDefaults` (
+`region_id` int(11),
+`adult_defuault_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jun 16 17:34:24 [info] INSERT INTO schema_migrations (version) VALUES ('20110613205448')
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `addfooddesc`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `CNPPFruits`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `equiv0304`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `fdbPyramid`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `fnddsnutval`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `FNDDSRecCount`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `fnddssrlinks`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `foodCalorieLevels`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `foodIntakePatterns`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `foodportiondesc`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `foodsubcodelinks`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `foodweights`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `gramWeights`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `involvement`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `mainfooddesc`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `measureDescriptions`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `measurementUnit`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `moistnfatadjust`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `nutdesc`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `nutrientDescription`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `nutrientRecommendedValue`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `nutrientValues`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `otherDefinition`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `participants`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `person`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `pyramidDesc`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `PyramidLinks`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `PyramidStandards`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `querServing`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `recommendedServings`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `relationshipAgencies`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `relationshipTypes`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `skips`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `subcodedesc`
+Jun 16 17:34:24 [info] DROP TABLE IF EXISTS `terms`
+Jun 16 17:34:24 [info] INSERT INTO schema_migrations (version) VALUES ('20110614154819')
+Jun 16 17:34:24 [info] ALTER TABLE tblrecall ADD `SoFAS` decimal(10, 5)
+Jun 16 17:34:24 [info] ALTER TABLE tblrecall ADD `refined_grains` decimal(10, 5)
+Jun 16 17:34:25 [info] ALTER TABLE tblrecall ADD `sat_fat` decimal(10, 5)
+Jun 16 17:34:25 [info] ALTER TABLE tblrecall ADD `seafood` decimal(10, 5)
+Jun 16 17:34:25 [info] ALTER TABLE tblrecall ADD `oils` decimal(10, 5)
+Jun 16 17:34:25 [info] ALTER TABLE tblrecall ADD `folate` decimal(10, 5)
+Jun 16 17:34:25 [info] ALTER TABLE tblrecall ADD `iron` decimal(10, 5)
+Jun 16 17:34:25 [info] ALTER TABLE tblrecall ADD `food_energy` decimal(10, 5)
+Jun 16 17:34:25 [info] ALTER TABLE tblrecall ADD `fiber` decimal(10, 5)
+Jun 16 17:34:25 [info] ALTER TABLE tblrecall ADD `potassium` decimal(10, 5)
+Jun 16 17:34:25 [info] ALTER TABLE tblrecall ADD `calcium` decimal(10, 5)
+Jun 16 17:34:26 [info] ALTER TABLE tblrecall ADD `total_sodium` decimal(10, 5)
+Jun 16 17:34:26 [info] ALTER TABLE tblrecall ADD `total_protein` decimal(10, 5)
+Jun 16 17:34:26 [info] INSERT INTO schema_migrations (version) VALUES ('20110614180452')
+Jun 16 17:34:26 [info] SHOW COLUMNS FROM `RegionAdultDefaults` LIKE 'adult_defuault_id'
+Jun 16 17:34:26 [info] ALTER TABLE `RegionAdultDefaults` CHANGE `adult_defuault_id` `adult_default_id` int(11)
+Jun 16 17:34:26 [info] INSERT INTO schema_migrations (version) VALUES ('20110616201742')
+Jun 16 17:34:26 [info] DROP TABLE IF EXISTS `UserPermissions`
+Jun 16 17:34:26 [info] DROP TABLE IF EXISTS `UserParents`
+Jun 16 17:34:26 [info] INSERT INTO schema_migrations (version) VALUES ('20110616202800')
+Jul 11 12:21:50 [info] SELECT version FROM schema_migrations
+Jul 11 12:21:50 [info] SELECT version FROM schema_migrations
+Jul 11 12:21:50 [info] SELECT version FROM schema_migrations
+Jul 11 12:21:50 [info] SHOW COLUMNS FROM `Questions` LIKE 'questiontype_id'
+Jul 11 12:21:50 [info] ALTER TABLE `Questions` CHANGE `questiontype_id` `question_type_id` int(11)
+Jul 11 12:21:50 [info] INSERT INTO schema_migrations (version) VALUES ('20110711161707')
+Jul 12 12:21:04 [info] SELECT version FROM schema_migrations
+Jul 12 12:21:04 [info] SELECT version FROM schema_migrations
+Jul 12 12:21:04 [info] SELECT version FROM schema_migrations
+Jul 12 12:21:04 [info] DROP TABLE IF EXISTS `focusType`
+Jul 12 12:21:04 [info] DROP TABLE IF EXISTS `focusLocation`
+Jul 12 12:21:04 [info] INSERT INTO schema_migrations (version) VALUES ('20110711200611')
+Jul 12 12:21:04 [info] CREATE TABLE `QuestionTags` (
+`question_id` int(11),
+`tag_id` int(11),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jul 12 12:21:04 [info] CREATE TABLE `Tags` (
+`title` varchar(255),
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jul 12 12:21:04 [info] INSERT INTO schema_migrations (version) VALUES ('20110712161917')
+Jul 15 21:46:53 [info] SELECT version FROM schema_migrations
+Jul 15 21:46:53 [info] SELECT version FROM schema_migrations
+Jul 15 21:46:53 [info] SELECT version FROM schema_migrations
+Jul 15 21:46:53 [info] ALTER TABLE programImpacts ADD `creatorID` int(11)
+Jul 15 21:46:53 [info] ALTER TABLE programImpacts ADD `regionID` int(11)
+Jul 15 21:46:53 [info] INSERT INTO schema_migrations (version) VALUES ('20110714150209')
+Jul 15 21:47:29 [info] SELECT version FROM schema_migrations
+Jul 15 21:47:29 [info] SELECT version FROM schema_migrations
+Jul 15 21:47:29 [info] SELECT version FROM schema_migrations
+Jul 15 21:47:29 [info] ALTER TABLE YouthGroupQuestionSetAnswers ADD `youth_group_question_sets_id` int(11)
+Jul 15 21:47:29 [info] ALTER TABLE YouthGroupQuestionSetAnswers ADD `question_answers_id` int(11)
+Jul 15 21:47:29 [info] ALTER TABLE YouthGroupQuestionSetAnswers ADD `date_created` timestamp
+Jul 15 21:47:30 [info] INSERT INTO schema_migrations (version) VALUES ('20110716013912')
+Jul 15 22:34:07 [info] SELECT version FROM schema_migrations
+Jul 15 22:34:07 [info] SELECT version FROM schema_migrations
+Jul 15 22:34:07 [info] SELECT version FROM schema_migrations
+Jul 15 22:34:07 [info] SHOW COLUMNS FROM `YouthGroupQuestionSets` LIKE 'youthgroup_id'
+Jul 15 22:34:07 [info] ALTER TABLE `YouthGroupQuestionSets` CHANGE `youthgroup_id` `youth_group_id` int(11)
+Jul 15 22:34:07 [info] INSERT INTO schema_migrations (version) VALUES ('20110716023208')
+Aug 26 23:56:46 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255)) ;
+Aug 26 23:56:47 [info] CREATE UNIQUE INDEX idx_schema_migrations_version ON `schema_migrations`(`version`)
+Aug 26 23:56:47 [info] SELECT version FROM schema_migrations
+Aug 26 23:56:47 [info] SELECT version FROM schema_migrations
+Aug 26 23:56:47 [info] SELECT version FROM schema_migrations
+Aug 26 23:56:47 [info] CREATE TABLE `Keys` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`secret_key` varchar(255),
+`api_key` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Aug 26 23:56:47 [info] CREATE TABLE `Logs` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`type` varchar(255),
+`line` varchar(255),
+`file` text,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`message` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Aug 26 23:56:47 [info] CREATE TABLE `Sessions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`session_key` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Aug 26 23:56:47 [info] CREATE TABLE `UserKeys` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`key_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Aug 26 23:56:47 [info] CREATE TABLE `UserPermissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`permission_id` int(11),
+ PRIMARY KEY (`id`)) ;
+Aug 26 23:56:47 [info] CREATE TABLE `Users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`username` varchar(255),
+`password` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Aug 26 23:56:47 [info] CREATE TABLE `UserSessions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`session_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Aug 26 23:56:48 [info] INSERT INTO schema_migrations (version) VALUES ('20110716063216')
+Aug 27 13:18:17 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255)) ;
+Aug 27 13:18:17 [info] CREATE UNIQUE INDEX idx_schema_migrations_version ON `schema_migrations`(`version`)
+Aug 27 13:18:17 [info] SELECT version FROM schema_migrations
+Aug 27 13:18:17 [info] SELECT version FROM schema_migrations
+Aug 27 13:18:17 [info] SELECT version FROM schema_migrations
+Aug 27 13:18:17 [info] CREATE TABLE `Keys` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`secret_key` varchar(255),
+`api_key` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Aug 27 13:18:17 [info] CREATE TABLE `Logs` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`type` varchar(255),
+`line` varchar(255),
+`file` text,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`message` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Aug 27 13:18:17 [info] CREATE TABLE `Sessions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`session_key` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Aug 27 13:18:18 [info] CREATE TABLE `UserKeys` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`key_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Aug 27 13:18:18 [info] CREATE TABLE `UserPermissions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`permission_id` int(11),
+ PRIMARY KEY (`id`)) ;
+Aug 27 13:18:18 [info] CREATE TABLE `Users` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`first_name` varchar(255),
+`last_name` varchar(255),
+`username` varchar(255),
+`password` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Aug 27 13:18:18 [info] CREATE TABLE `UserSessions` (
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+`user_id` int(11),
+`session_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)) ;
+Aug 27 13:18:18 [info] INSERT INTO schema_migrations (version) VALUES ('20110716063216')
+Aug 27 17:17:20 [info] SELECT version FROM schema_migrations
+Aug 27 17:17:20 [info] SELECT version FROM schema_migrations
+Aug 27 17:17:20 [info] SELECT version FROM schema_migrations
+Aug 27 17:17:20 [info] CREATE TABLE `Events` (
+`title` varchar(255),
+`desc` varchar(255),
+`is_private` tinyint(1) DEFAULT 0,
+`longitude` varchar(255),
+`latitude` varchar(255),
+`is_over` tinyint(1) DEFAULT 0,
+`is_busted` tinyint(1) DEFAULT 0,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Aug 27 17:17:21 [info] CREATE TABLE `EventUsers` (
+`event_id` int(11),
+`user_id` int(11),
+`user_group` int(11) DEFAULT 0,
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Aug 27 17:17:21 [info] CREATE TABLE `Items` (
+`title` varchar(255),
+`desc` varchar(255),
+`created_by_user_id` int(11),
+`claimed_by_user_id` int(11) DEFAULT 0,
+`event_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Aug 27 17:17:21 [info] CREATE TABLE `UserUsers` (
+`requested_by_user_id` int(11),
+`recipient_user_id` int(11),
+`is_pending` tinyint(1) DEFAULT 1,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Aug 27 17:17:21 [info] CREATE TABLE `Comments` (
+`event_id` int(11),
+`created_by_user_id` int(11),
+`comment` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Aug 27 17:17:21 [info] ALTER TABLE Users ADD `display_name` varchar(255)
+Aug 27 17:17:22 [info] INSERT INTO schema_migrations (version) VALUES ('20110827191339')
+Aug 27 17:18:04 [info] SELECT version FROM schema_migrations
+Aug 27 17:18:04 [info] SELECT version FROM schema_migrations
+Aug 27 17:18:04 [info] SELECT version FROM schema_migrations
+Aug 27 17:18:04 [info] DROP TABLE IF EXISTS `Events`
+Aug 27 17:18:04 [info] DROP TABLE IF EXISTS `EventUsers`
+Aug 27 17:18:04 [info] DROP TABLE IF EXISTS `Items`
+Aug 27 17:18:04 [info] DROP TABLE IF EXISTS `UserUsers`
+Aug 27 17:18:04 [info] DROP TABLE IF EXISTS `Comments`
+Aug 27 17:18:04 [info] ALTER TABLE `Users` DROP COLUMN `display_name`
+Aug 27 17:18:05 [info] DELETE FROM schema_migrations WHERE version = '20110827191339'
+Aug 27 17:18:18 [info] SELECT version FROM schema_migrations
+Aug 27 17:18:18 [info] SELECT version FROM schema_migrations
+Aug 27 17:18:18 [info] SELECT version FROM schema_migrations
+Aug 27 17:18:18 [info] CREATE TABLE `Events` (
+`title` varchar(255),
+`desc` varchar(255),
+`is_private` tinyint(1) DEFAULT 0,
+`longitude` varchar(255),
+`latitude` varchar(255),
+`is_over` tinyint(1) DEFAULT 0,
+`is_busted` tinyint(1) DEFAULT 0,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Aug 27 17:18:18 [info] CREATE TABLE `EventUsers` (
+`event_id` int(11),
+`user_id` int(11),
+`user_group` int(11) DEFAULT 0,
+`date_created` timestamp,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Aug 27 17:18:18 [info] CREATE TABLE `Items` (
+`title` varchar(255),
+`desc` varchar(255),
+`created_by_user_id` int(11),
+`claimed_by_user_id` int(11) DEFAULT 0,
+`event_id` int(11),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Aug 27 17:18:18 [info] CREATE TABLE `UserUsers` (
+`requested_by_user_id` int(11),
+`recipient_user_id` int(11),
+`is_pending` tinyint(1) DEFAULT 1,
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Aug 27 17:18:18 [info] CREATE TABLE `Comments` (
+`event_id` int(11),
+`created_by_user_id` int(11),
+`comment` varchar(255),
+`date_created` timestamp DEFAULT CURRENT_TIMESTAMP,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Aug 27 17:18:19 [info] ALTER TABLE Users ADD `display_name` varchar(255)
+Aug 27 17:18:19 [info] INSERT INTO schema_migrations (version) VALUES ('20110827191339')

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bait_types">
+    	<item>Frozen Shrimp</item>
+    	<item>Live Shrimp</item>
+		<item>Frozen Mullet</item>
+		<item>Live Mullet</item>
+		<item>Frozen Squid</item>
+		<item>Live Squid</item>
+	</string-array>
+</resources>

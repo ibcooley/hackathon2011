@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:weightSum="1">
+    <ImageView android:src="@drawable/icon" android:layout_width="match_parent" android:layout_height="282dp" android:id="@+id/spot_image"></ImageView>
+    <CheckedTextView android:layout_width="wrap_content" android:text="@string/fishing_spot" android:id="@+id/checkedTextView1" android:layout_height="wrap_content"></CheckedTextView>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/spot_fishingspot">
+        <requestFocus></requestFocus>
+    </EditText>
+    <CheckedTextView android:text="@string/upload_image" android:id="@+id/checkedTextView2" android:layout_height="wrap_content" android:layout_width="wrap_content"></CheckedTextView>
+    <Button android:layout_height="wrap_content" android:layout_width="128dp" android:text="Take Photo" android:id="@+id/spot_takephoto"></Button>
+    <CheckedTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save_to_file" android:id="@+id/SaveNewFish"></CheckedTextView>
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/spot_spotsavebutton" android:text="Save Fishing Spot"></Button>
+    
+</LinearLayout>

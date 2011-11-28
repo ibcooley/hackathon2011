@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, GroceryScanner!</string>
+    <string name="app_name">Grocery List Scanner</string>
+    <string name="welcome">Welcome To The Grocery Assistant App</string>
+</resources>

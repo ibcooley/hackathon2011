@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@drawable/grey" android:orientation="vertical"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:weightSum="1">
+	<Button android:id="@+id/submitname" android:text="Create"
+		android:textSize="35sp" android:textColor="#FFFFFF"
+		android:layout_width="200dip" android:background="@drawable/custom_button"
+		android:layout_height="50dip" android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true" android:layout_marginBottom="67dp"></Button>
+	<TextView android:textColor="#FFFFFF" android:textSize="30sp"
+		android:layout_width="wrap_content" android:id="@+id/textView1"
+		android:text="Give Your List A Name" android:layout_height="wrap_content"
+		android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+		android:layout_marginTop="80dp"></TextView>
+	<EditText android:id="@+id/listname" android:layout_width="300dip"
+		android:layout_height="wrap_content" android:layout_below="@+id/textView1"
+		 android:layout_marginTop="73dp" android:layout_centerHorizontal="true">
+		<requestFocus></requestFocus>
+	</EditText>
+
+</RelativeLayout>

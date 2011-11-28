@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" android:text="@string/image_of_favorite_spots"/>
+<!--  <ImageButton android:layout_width="match_parent" android:layout_height="232dp" android:layout_weight="0.20" android:id="@+id/main_spotsimage"></ImageButton> -->
+<com.google.android.maps.MapView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mapview"
+    android:layout_width="fill_parent"
+    android:clickable="true"
+    android:apiKey="0ZxoLsdwZv3PFKbY_QTdLZOFjpu_LhSXNHgDv5A" android:layout_height="248dp" android:layout_weight="0.81"/>
+<CheckedTextView android:layout_width="wrap_content" android:text="@string/fishing_spot" android:id="@+id/checkedTextView1" android:layout_height="wrap_content"></CheckedTextView>
+<Spinner android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/main_todaysspot"></Spinner>
+<CheckedTextView android:layout_width="wrap_content" android:text="@string/fish_caught" android:id="@+id/checkedTextView2" android:layout_height="wrap_content"></CheckedTextView>
+<Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Fish Caught" android:id="@+id/main_fishcaught"></Button>
+</LinearLayout>

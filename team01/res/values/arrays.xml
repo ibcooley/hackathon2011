@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string-array name="device_names">
+	    <item>Fridge</item>
+	    <item>Microwave</item>   
+	</string-array>
+	
+	<string-array name="device_bool">
+	    <item>true</item>
+	    <item>false</item>   
+	</string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ParkingPalActivity!</string>
+    <string name="app_name">ParkingPal</string>
+    <string name="mark_my_spot">Mark my Spot</string>
+    <string name="find_empty_spot">Find empty Spot</string>
+    <string name="locate_my_car">Locate my Car</string>
+    <string name="locate_my_car_AugReality">Locate car using Augmented Reality</string>
+</resources>

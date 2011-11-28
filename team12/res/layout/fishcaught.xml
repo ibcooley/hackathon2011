@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:weightSum="1">
+    <CheckedTextView android:text="@string/lat_long" android:id="@+id/checkedTextView4" android:layout_height="wrap_content" android:layout_width="wrap_content"></CheckedTextView>
+    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:inputType="textPersonName" android:id="@+id/lat_long">
+        <requestFocus></requestFocus>
+    </EditText>
+    <CheckedTextView android:layout_width="wrap_content" android:id="@+id/checkedTextView3" android:layout_height="wrap_content" android:text="@string/fish_type"></CheckedTextView>
+    <Spinner android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/FishType"></Spinner>
+    <CheckedTextView android:layout_width="wrap_content" android:id="@+id/checkedTextView1" android:layout_height="wrap_content" android:text="@string/fish_size"></CheckedTextView>
+    <Spinner android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/FishSize"></Spinner>
+    <CheckedTextView android:layout_width="wrap_content" android:id="@+id/checkedTextView2" android:layout_height="wrap_content" android:text="@string/take_photo"></CheckedTextView>
+    <LinearLayout
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="0.97">
+        <ImageView android:id="@+id/fishcaught_fishimage" android:layout_height="wrap_content" android:layout_width="match_parent"></ImageView>
+    </LinearLayout>
+    <Button android:id="@+id/fishcaught_takephoto" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/take_photo"></Button>
+    <Button android:layout_height="wrap_content" android:layout_width="146dp" android:id="@+id/catch_save" android:text="@string/save_catch"></Button>
+    
+</LinearLayout>

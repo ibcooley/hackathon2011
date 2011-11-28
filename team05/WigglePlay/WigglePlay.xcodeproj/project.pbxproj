@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D36549E14096D9D002B686D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D36549D14096D9D002B686D /* UIKit.framework */; };
+		2D3654A014096D9D002B686D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D36549F14096D9D002B686D /* Foundation.framework */; };
+		2D3654A214096D9D002B686D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3654A114096D9D002B686D /* CoreGraphics.framework */; };
+		2D3654A814096D9D002B686D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D3654A614096D9D002B686D /* InfoPlist.strings */; };
+		2D3654AB14096D9D002B686D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3654AA14096D9D002B686D /* main.m */; };
+		2D3654AE14096D9D002B686D /* WigglePlayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3654AD14096D9D002B686D /* WigglePlayAppDelegate.m */; };
+		2D3654B114096D9D002B686D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3654AF14096D9D002B686D /* MainWindow.xib */; };
+		2D3654B414096D9D002B686D /* WigglePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3654B314096D9D002B686D /* WigglePlayViewController.m */; };
+		2D3654B714096D9D002B686D /* WigglePlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3654B514096D9D002B686D /* WigglePlayViewController.xib */; };
+		2D3654BE14096D9D002B686D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D36549D14096D9D002B686D /* UIKit.framework */; };
+		2D3654BF14096D9D002B686D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D36549F14096D9D002B686D /* Foundation.framework */; };
+		2D3654C014096D9D002B686D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3654A114096D9D002B686D /* CoreGraphics.framework */; };
+		2D3654C814096D9D002B686D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D3654C614096D9D002B686D /* InfoPlist.strings */; };
+		2D3654CB14096D9D002B686D /* WigglePlayTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 2D3654CA14096D9D002B686D /* WigglePlayTests.h */; };
+		2D3654CD14096D9D002B686D /* WigglePlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3654CC14096D9D002B686D /* WigglePlayTests.m */; };
+		2D3654E3140989FF002B686D /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D3654E2140989FF002B686D /* square.png */; };
+		2D3654F31409C2AD002B686D /* AVFoundation in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3654F21409C2AD002B686D /* AVFoundation */; };
+		2D3654FD1409CC33002B686D /* asYouGroove.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D3654FC1409CC33002B686D /* asYouGroove.mp3 */; };
+		987A31FB1409AAD3008BF835 /* wigglePlayIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 987A31FA1409AAD3008BF835 /* wigglePlayIcon.png */; };
+		987A31FE1409AADB008BF835 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 987A31FD1409AADB008BF835 /* Default-Portrait~ipad.png */; };
+		987A32081409B432008BF835 /* preview 0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 987A32071409B432008BF835 /* preview 0.mp3 */; };
+		989FE15C1409B80800AB9BF8 /* bubbleTrouble.png in Resources */ = {isa = PBXBuildFile; fileRef = 989FE15B1409B80800AB9BF8 /* bubbleTrouble.png */; };
+		989FE1621409B81000AB9BF8 /* bunnyHunt.png in Resources */ = {isa = PBXBuildFile; fileRef = 989FE15E1409B81000AB9BF8 /* bunnyHunt.png */; };
+		989FE1631409B81000AB9BF8 /* concentration.png in Resources */ = {isa = PBXBuildFile; fileRef = 989FE15F1409B81000AB9BF8 /* concentration.png */; };
+		989FE1641409B81000AB9BF8 /* mineSweeper.png in Resources */ = {isa = PBXBuildFile; fileRef = 989FE1601409B81000AB9BF8 /* mineSweeper.png */; };
+		989FE1651409B81000AB9BF8 /* stack.png in Resources */ = {isa = PBXBuildFile; fileRef = 989FE1611409B81000AB9BF8 /* stack.png */; };
+		989FE1671409B8B200AB9BF8 /* backGround.png in Resources */ = {isa = PBXBuildFile; fileRef = 989FE1661409B8B200AB9BF8 /* backGround.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D3654C114096D9D002B686D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D36549014096D9D002B686D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D36549814096D9D002B686D;
+			remoteInfo = WigglePlay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D36549914096D9D002B686D /* WigglePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WigglePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D36549D14096D9D002B686D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2D36549F14096D9D002B686D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2D3654A114096D9D002B686D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2D3654A514096D9D002B686D /* WigglePlay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WigglePlay-Info.plist"; sourceTree = "<group>"; };
+		2D3654A714096D9D002B686D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2D3654A914096D9D002B686D /* WigglePlay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WigglePlay-Prefix.pch"; sourceTree = "<group>"; };
+		2D3654AA14096D9D002B686D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D3654AC14096D9D002B686D /* WigglePlayAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WigglePlayAppDelegate.h; sourceTree = "<group>"; };
+		2D3654AD14096D9D002B686D /* WigglePlayAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WigglePlayAppDelegate.m; sourceTree = "<group>"; };
+		2D3654B014096D9D002B686D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		2D3654B214096D9D002B686D /* WigglePlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WigglePlayViewController.h; sourceTree = "<group>"; };
+		2D3654B314096D9D002B686D /* WigglePlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WigglePlayViewController.m; sourceTree = "<group>"; };
+		2D3654B614096D9D002B686D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WigglePlayViewController.xib; sourceTree = "<group>"; };
+		2D3654BD14096D9D002B686D /* WigglePlayTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WigglePlayTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D3654C514096D9D002B686D /* WigglePlayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WigglePlayTests-Info.plist"; sourceTree = "<group>"; };
+		2D3654C714096D9D002B686D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2D3654C914096D9D002B686D /* WigglePlayTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WigglePlayTests-Prefix.pch"; sourceTree = "<group>"; };
+		2D3654CA14096D9D002B686D /* WigglePlayTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WigglePlayTests.h; sourceTree = "<group>"; };
+		2D3654CC14096D9D002B686D /* WigglePlayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WigglePlayTests.m; sourceTree = "<group>"; };
+		2D3654E2140989FF002B686D /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
+		2D3654F21409C2AD002B686D /* AVFoundation */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = AVFoundation; path = System/Library/Frameworks/AVFoundation.framework/AVFoundation; sourceTree = SDKROOT; };
+		2D3654FC1409CC33002B686D /* asYouGroove.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asYouGroove.mp3; sourceTree = "<group>"; };
+		987A31FA1409AAD3008BF835 /* wigglePlayIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wigglePlayIcon.png; sourceTree = "<group>"; };
+		987A31FD1409AADB008BF835 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		987A32071409B432008BF835 /* preview 0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "preview 0.mp3"; sourceTree = "<group>"; };
+		989FE15B1409B80800AB9BF8 /* bubbleTrouble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleTrouble.png; sourceTree = "<group>"; };
+		989FE15E1409B81000AB9BF8 /* bunnyHunt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bunnyHunt.png; sourceTree = "<group>"; };
+		989FE15F1409B81000AB9BF8 /* concentration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = concentration.png; sourceTree = "<group>"; };
+		989FE1601409B81000AB9BF8 /* mineSweeper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mineSweeper.png; sourceTree = "<group>"; };
+		989FE1611409B81000AB9BF8 /* stack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stack.png; sourceTree = "<group>"; };
+		989FE1661409B8B200AB9BF8 /* backGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backGround.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D36549614096D9D002B686D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D36549E14096D9D002B686D /* UIKit.framework in Frameworks */,
+				2D3654A014096D9D002B686D /* Foundation.framework in Frameworks */,
+				2D3654A214096D9D002B686D /* CoreGraphics.framework in Frameworks */,
+				2D3654F31409C2AD002B686D /* AVFoundation in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D3654B914096D9D002B686D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D3654BE14096D9D002B686D /* UIKit.framework in Frameworks */,
+				2D3654BF14096D9D002B686D /* Foundation.framework in Frameworks */,
+				2D3654C014096D9D002B686D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D36548E14096D9D002B686D = {
+			isa = PBXGroup;
+			children = (
+				989FE1661409B8B200AB9BF8 /* backGround.png */,
+				989FE15E1409B81000AB9BF8 /* bunnyHunt.png */,
+				989FE15F1409B81000AB9BF8 /* concentration.png */,
+				989FE1601409B81000AB9BF8 /* mineSweeper.png */,
+				989FE1611409B81000AB9BF8 /* stack.png */,
+				989FE15B1409B80800AB9BF8 /* bubbleTrouble.png */,
+				987A31FD1409AADB008BF835 /* Default-Portrait~ipad.png */,
+				987A31FA1409AAD3008BF835 /* wigglePlayIcon.png */,
+				2D3654A314096D9D002B686D /* WigglePlay */,
+				2D3654C314096D9D002B686D /* WigglePlayTests */,
+				2D36549C14096D9D002B686D /* Frameworks */,
+				2D36549A14096D9D002B686D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2D36549A14096D9D002B686D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D36549914096D9D002B686D /* WigglePlay.app */,
+				2D3654BD14096D9D002B686D /* WigglePlayTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D36549C14096D9D002B686D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D3654F21409C2AD002B686D /* AVFoundation */,
+				2D36549D14096D9D002B686D /* UIKit.framework */,
+				2D36549F14096D9D002B686D /* Foundation.framework */,
+				2D3654A114096D9D002B686D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D3654A314096D9D002B686D /* WigglePlay */ = {
+			isa = PBXGroup;
+			children = (
+				2D3654FC1409CC33002B686D /* asYouGroove.mp3 */,
+				987A32071409B432008BF835 /* preview 0.mp3 */,
+				2D3654AC14096D9D002B686D /* WigglePlayAppDelegate.h */,
+				2D3654AD14096D9D002B686D /* WigglePlayAppDelegate.m */,
+				2D3654AF14096D9D002B686D /* MainWindow.xib */,
+				2D3654B214096D9D002B686D /* WigglePlayViewController.h */,
+				2D3654B314096D9D002B686D /* WigglePlayViewController.m */,
+				2D3654B514096D9D002B686D /* WigglePlayViewController.xib */,
+				2D3654E2140989FF002B686D /* square.png */,
+				2D3654A414096D9D002B686D /* Supporting Files */,
+			);
+			path = WigglePlay;
+			sourceTree = "<group>";
+		};
+		2D3654A414096D9D002B686D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D3654A514096D9D002B686D /* WigglePlay-Info.plist */,
+				2D3654A614096D9D002B686D /* InfoPlist.strings */,
+				2D3654A914096D9D002B686D /* WigglePlay-Prefix.pch */,
+				2D3654AA14096D9D002B686D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D3654C314096D9D002B686D /* WigglePlayTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D3654CA14096D9D002B686D /* WigglePlayTests.h */,
+				2D3654CC14096D9D002B686D /* WigglePlayTests.m */,
+				2D3654C414096D9D002B686D /* Supporting Files */,
+			);
+			path = WigglePlayTests;
+			sourceTree = "<group>";
+		};
+		2D3654C414096D9D002B686D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D3654C514096D9D002B686D /* WigglePlayTests-Info.plist */,
+				2D3654C614096D9D002B686D /* InfoPlist.strings */,
+				2D3654C914096D9D002B686D /* WigglePlayTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D36549814096D9D002B686D /* WigglePlay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D3654D014096D9D002B686D /* Build configuration list for PBXNativeTarget "WigglePlay" */;
+			buildPhases = (
+				2D36549514096D9D002B686D /* Sources */,
+				2D36549614096D9D002B686D /* Frameworks */,
+				2D36549714096D9D002B686D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WigglePlay;
+			productName = WigglePlay;
+			productReference = 2D36549914096D9D002B686D /* WigglePlay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D3654BC14096D9D002B686D /* WigglePlayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D3654D314096D9D002B686D /* Build configuration list for PBXNativeTarget "WigglePlayTests" */;
+			buildPhases = (
+				2D3654B814096D9D002B686D /* Sources */,
+				2D3654B914096D9D002B686D /* Frameworks */,
+				2D3654BA14096D9D002B686D /* Resources */,
+				2D3654BB14096D9D002B686D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D3654C214096D9D002B686D /* PBXTargetDependency */,
+			);
+			name = WigglePlayTests;
+			productName = WigglePlayTests;
+			productReference = 2D3654BD14096D9D002B686D /* WigglePlayTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D36549014096D9D002B686D /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 2D36549314096D9D002B686D /* Build configuration list for PBXProject "WigglePlay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2D36548E14096D9D002B686D;
+			productRefGroup = 2D36549A14096D9D002B686D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D36549814096D9D002B686D /* WigglePlay */,
+				2D3654BC14096D9D002B686D /* WigglePlayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D36549714096D9D002B686D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D3654A814096D9D002B686D /* InfoPlist.strings in Resources */,
+				2D3654B114096D9D002B686D /* MainWindow.xib in Resources */,
+				2D3654B714096D9D002B686D /* WigglePlayViewController.xib in Resources */,
+				2D3654E3140989FF002B686D /* square.png in Resources */,
+				987A31FB1409AAD3008BF835 /* wigglePlayIcon.png in Resources */,
+				987A31FE1409AADB008BF835 /* Default-Portrait~ipad.png in Resources */,
+				987A32081409B432008BF835 /* preview 0.mp3 in Resources */,
+				989FE15C1409B80800AB9BF8 /* bubbleTrouble.png in Resources */,
+				989FE1621409B81000AB9BF8 /* bunnyHunt.png in Resources */,
+				989FE1631409B81000AB9BF8 /* concentration.png in Resources */,
+				989FE1641409B81000AB9BF8 /* mineSweeper.png in Resources */,
+				989FE1651409B81000AB9BF8 /* stack.png in Resources */,
+				989FE1671409B8B200AB9BF8 /* backGround.png in Resources */,
+				2D3654FD1409CC33002B686D /* asYouGroove.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D3654BA14096D9D002B686D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D3654C814096D9D002B686D /* InfoPlist.strings in Resources */,
+				2D3654CB14096D9D002B686D /* WigglePlayTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D3654BB14096D9D002B686D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D36549514096D9D002B686D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D3654AB14096D9D002B686D /* main.m in Sources */,
+				2D3654AE14096D9D002B686D /* WigglePlayAppDelegate.m in Sources */,
+				2D3654B414096D9D002B686D /* WigglePlayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D3654B814096D9D002B686D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D3654CD14096D9D002B686D /* WigglePlayTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D3654C214096D9D002B686D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D36549814096D9D002B686D /* WigglePlay */;
+			targetProxy = 2D3654C114096D9D002B686D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D3654A614096D9D002B686D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D3654A714096D9D002B686D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2D3654AF14096D9D002B686D /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D3654B014096D9D002B686D /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		2D3654B514096D9D002B686D /* WigglePlayViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D3654B614096D9D002B686D /* en */,
+			);
+			name = WigglePlayViewController.xib;
+			sourceTree = "<group>";
+		};
+		2D3654C614096D9D002B686D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D3654C714096D9D002B686D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D3654CE14096D9D002B686D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		2D3654CF14096D9D002B686D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		2D3654D114096D9D002B686D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WigglePlay/WigglePlay-Prefix.pch";
+				INFOPLIST_FILE = "WigglePlay/WigglePlay-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/Frameworks/AVFoundation.framework\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2D3654D214096D9D002B686D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WigglePlay/WigglePlay-Prefix.pch";
+				INFOPLIST_FILE = "WigglePlay/WigglePlay-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/Frameworks/AVFoundation.framework\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2D3654D414096D9D002B686D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WigglePlay.app/WigglePlay";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WigglePlayTests/WigglePlayTests-Prefix.pch";
+				INFOPLIST_FILE = "WigglePlayTests/WigglePlayTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2D3654D514096D9D002B686D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WigglePlay.app/WigglePlay";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WigglePlayTests/WigglePlayTests-Prefix.pch";
+				INFOPLIST_FILE = "WigglePlayTests/WigglePlayTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D36549314096D9D002B686D /* Build configuration list for PBXProject "WigglePlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D3654CE14096D9D002B686D /* Debug */,
+				2D3654CF14096D9D002B686D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D3654D014096D9D002B686D /* Build configuration list for PBXNativeTarget "WigglePlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D3654D114096D9D002B686D /* Debug */,
+				2D3654D214096D9D002B686D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D3654D314096D9D002B686D /* Build configuration list for PBXNativeTarget "WigglePlayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D3654D414096D9D002B686D /* Debug */,
+				2D3654D514096D9D002B686D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D36549014096D9D002B686D /* Project object */;
+}

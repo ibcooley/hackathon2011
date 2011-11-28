@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textSize="15sp"
+        android:background="#ffffff"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:stretchColumns="0">
+
+        <TableRow>
+            <ImageView android:id="@+id/title" android:layout_height="wrap_content"
+                      android:layout_width="match_parent" android:layout_gravity="center_horizontal" android:background="@drawable/title"></ImageView>
+        </TableRow>
+
+        <TableRow>
+            <AbsoluteLayout android:background="@drawable/lighter" android:scaleType="center" android:id="@+id/layout" android:layout_height="300px" android:layout_width="fill_parent" android:layout_centerHorizontal="true">
+                <ImageView android:id="@+id/pullStringImage" android:layout_width="fill_parent" android:src="@drawable/pullstring"
+                       android:layout_height="wrap_content" android:layout_centerHorizontal="true"></ImageView>
+            </AbsoluteLayout>
+        </TableRow>
+
+        <TableRow>
+             <Spinner android:prompt="@string/spinner" android:layout_width="match_parent"  android:layout_height="wrap_content" android:id="@+id/spinner" ></Spinner>
+         </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout android:id="@+id/buttons" android:weightSum="3" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+              android:layout_width="162px" android:layout_height="50px">
+        <Button android:focusable="true" android:background="@drawable/button01" android:layout_width="54px"
+                android:layout_height="50px" android:id="@+id/button01"></Button>
+        <Button android:focusable="true" android:background="@drawable/button02" android:layout_width="54px"
+                android:layout_height="50px" android:id="@+id/button02"></Button>
+        <Button android:focusable="true" android:background="@drawable/button03" android:layout_width="54px"
+                android:layout_height="50px" android:id="@+id/button03"></Button>
+    </LinearLayout>
+
+
+</RelativeLayout>

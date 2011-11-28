@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fishing_types">
+    	<item>Offshore Fishing</item>
+    	<item>Surf Fishing</item>
+		<item>Fresh Water (Boat)</item>
+		<item>Fresh Water (Land)</item>
+		<item>Salt Water (Boat)</item>
+		<item>Casting Net/Sine Net Fishing</item>
+	</string-array>
+</resources>

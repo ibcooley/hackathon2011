@@ -1,0 +1,12 @@
+*~
+*.swp
+*.class
+*.apk
+*.dex
+bin/**/*
+gen/**/*
+bin/*
+gen/*
+.DS_Store
+src/**/.DS_Store
+res/**/.DS_Store

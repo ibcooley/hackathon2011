@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+android:id="@+id/widget160"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="#ff310202"
+android:padding="20px"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+	<TextView
+		android:id="@+id/widget172"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Awarity"
+		android:textSize="48sp"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		/>
+	<Button
+		android:id="@+id/main_continue_new_btn"
+		android:layout_width="135px"
+		android:layout_height="wrap_content"
+		android:text="@string/continueNew"
+		android:layout_alignTop="@+id/main_new_btn"
+		android:layout_alignParentRight="true"
+	>
+	</Button>
+	<Button
+		android:id="@+id/main_new_btn"
+		android:layout_width="135px"
+		android:layout_height="wrap_content"
+		android:text="@string/new_task"
+		android:layout_above="@+id/main_new_task_et"
+		android:layout_alignParentLeft="true"
+	>
+	</Button>
+	<EditText
+		android:id="@+id/main_new_task_et"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/main_existing_btn"
+		android:layout_alignParentLeft="true"
+	>
+	</EditText>
+	<Button
+		android:id="@+id/main_existing_btn"
+		android:layout_width="160px"
+		android:layout_height="wrap_content"
+		android:text="@string/existing_task"
+		android:layout_centerVertical="true"
+		android:layout_centerHorizontal="true"
+	>
+</Button>
+</RelativeLayout>

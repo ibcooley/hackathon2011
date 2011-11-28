@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bikes</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Trek 2012 Cobia</string>
+			<key>image</key>
+			<string>2012Cobia.png</string>
+			<key>cost</key>
+			<string>10</string>
+			<key>serial</key>
+			<string>10001</string>
+			<key>combination</key>
+			<string>3445653</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Trek 7200</string>
+			<key>image</key>
+			<string>7200.png</string>
+			<key>cost</key>
+			<string>10</string>
+			<key>serial</key>
+			<string>10002</string>
+			<key>combination</key>
+			<string>908345345</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Trek 7300WSD</string>
+			<key>image</key>
+			<string>7300WSD.png</string>
+			<key>cost</key>
+			<string>15</string>
+			<key>serial</key>
+			<string>10003</string>
+			<key>combination</key>
+			<string>4343299</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Trek BG Roulux 1</string>
+			<key>image</key>
+			<string>BGRoulux1.jpg</string>
+			<key>cost</key>
+			<string>25</string>
+			<key>serial</key>
+			<string>10004</string>
+			<key>combination</key>
+			<string>2342344</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Specialized Hotrock 20 Street Boys</string>
+			<key>image</key>
+			<string>Hotrock20StreetBoys.jpg</string>
+			<key>cost</key>
+			<string>10</string>
+			<key>serial</key>
+			<string>10005</string>
+			<key>combination</key>
+			<string>3432222</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Specialized Hotrock 24 7-Speed Girls</string>
+			<key>image</key>
+			<string>Hotrock247-SpeedGirls.jpg</string>
+			<key>cost</key>
+			<string>5</string>
+			<key>serial</key>
+			<string>10006</string>
+			<key>combination</key>
+			<string>6677822</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Trek Pure Deluxe Trike</string>
+			<key>image</key>
+			<string>PureDeluxeTrike.png</string>
+			<key>cost</key>
+			<string>40</string>
+			<key>serial</key>
+			<string>10007</string>
+			<key>combination</key>
+			<string>43336777</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Specialized Rockhopper LTD 29er</string>
+			<key>image</key>
+			<string>RockhopperLTD29er.jpg</string>
+			<key>cost</key>
+			<string>10</string>
+			<key>serial</key>
+			<string>10008</string>
+			<key>combination</key>
+			<string>63452221</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Specialized Stumpjumper Expert 29er</string>
+			<key>image</key>
+			<string>StumpjumperExpert29er.jpg</string>
+			<key>cost</key>
+			<string>15</string>
+			<key>serial</key>
+			<string>10009</string>
+			<key>combination</key>
+			<string>3445653</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Trek Top Fuel 9.7</string>
+			<key>image</key>
+			<string>TopFuel97.png</string>
+			<key>cost</key>
+			<string>25</string>
+			<key>serial</key>
+			<string>10010</string>
+			<key>combination</key>
+			<string>34536777</string>
+		</dict>
+	</array>
+</dict>
+</plist>

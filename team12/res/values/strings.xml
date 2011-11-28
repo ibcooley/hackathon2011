@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, AndroidAngler4Activity!</string>
+    <string name="app_name">AndroidAngler4</string>
+    <string name="fish_caught">Fish Caught</string>
+    <string name="fishing_spot">Today\'s Fishing Spot</string>
+    <string name="type_of_bait">Type of bait</string>
+    <string name="weather_conditions">Weather Conditions</string>
+    <string name="type_of_fishing">Type of fishing</string>
+    <string name="fish_size">Fish Size</string>
+    <string name="take_photo">Take a photo</string>
+    <string name="fish_type">Fish Type</string>
+    <string name="fishing_location">Fishing Location</string>
+    <string name="target_fish">Target Fish</string>
+    <string name="image_of_previous_spots">Previous Favorite Spots</string>
+    <string name="image_of_favorite_spots">Image Of Favorite Spots</string>
+    <string name="keeper">Did you keep it?</string>
+    <string name="good_luck_save">Good Luck!</string>
+    <string name="rate_app">Rate This App</string>
+    <string name="fishing_conditions">Today\'s Fishing Conditions</string>
+    <string name="image_upload">Upload</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="save_to_file">Save Fishing Spot</string>
+    <string name="lat_long">Latitute/Longitude</string>
+    <string name="no_notes">Nothing Yet</string>
+    <string name="save_catch">Save Catch</string>
+</resources>

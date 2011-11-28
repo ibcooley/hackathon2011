@@ -1,0 +1,4 @@
+#External Dependencies
+#Sat Aug 27 21:06:34 EDT 2011
+/Users/bgilbert/projects/Sparc/Hackathon-Backend/project/boot/scala-2.7.7/lib/scala-library.jar=HackathonScalatra.scala
+/Users/bgilbert/projects/Sparc/Hackathon-Backend/project/boot/scala-2.7.7/org.scala-tools.sbt/sbt/0.7.4/sbt_2.7.7-0.7.4.jar=HackathonScalatra.scala
